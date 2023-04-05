@@ -7,9 +7,12 @@ import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 import CategoriesCard from "@/components/CategoriesCard";
 import Wrapper from "@/components/Wrapper";
-import { Col, Row } from "antd";
+import { Carousel, Col, Row } from "antd";
 import CardProduct from "@/components/CardProduct";
-import Banar from "@/components/Banar";
+import Banner from "@/components/Banner";
+import MostProductCard from "@/components/MostProductCard";
+import Line from "@/components/Line";
+import CustomerCard from "@/components/CustomerCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +31,10 @@ export default function Home() {
               lg: 32,
             }}
           >
-            <Col className="gutter-row border-b-[0.5px] border-[#E4E4E4] relative" span={18}>
+            <Col
+              className="gutter-row border-b-[0.5px] border-[#E4E4E4] relative"
+              span={18}
+            >
               <div className="flex gap-5  flex-col ">
                 <div className="flex gap-5">
                   <Card />
@@ -85,7 +91,92 @@ export default function Home() {
               </Col>
             </Row>
           </div>
-          <Banar />
+          <Banner />
+          <div className="mt-[172px] ">
+            <Line right='More Sale' left='more'/>
+            <Row
+              gutter={{
+                xs: 8,
+                sm: 16,
+                md: 24,
+                lg: 32,
+              }}
+              className="pt-10"
+            >
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+              <Col className="gutter-row " span={8}>
+                <MostProductCard />
+              </Col>
+            </Row>
+          </div>
+
+          <div className="mt-[139px]">
+            <Row
+              gutter={{
+                xs: 8,
+                sm: 16,
+                md: 24,
+                lg: 32,
+              }}
+            >
+              <Col span={12} className="gutter-row ">
+                <Image
+                  src="/images/iphone.png"
+                  width="579"
+                  height='230'
+                  className="object-cover"
+                />
+              </Col>
+              <Col span={12}>
+                <Image src='/images/lap.png'
+                   width="579"
+                   height='230'
+                   className="object-cover"
+                />
+              </Col>
+            </Row>
+          </div>
+
+          <div className="mt-20">
+            <Line right='Customers' />
+          <Row 
+             gutter={{
+              xs: 8,
+              sm: 16,
+              md: 24,
+              lg: 32,
+            }}
+            className="pt-10"
+          >
+            <Col className="gutter-row " span={8}>
+            <CustomerCard />
+            </Col>
+
+            <Col className="gutter-row " span={8} >
+            <CustomerCard />
+            </Col>
+
+            <Col className="gutter-row " span={8}>
+            <CustomerCard />
+            </Col>
+           </Row>
+        
+          </div>
         </Wrapper>
       </main>
     </>
