@@ -1,7 +1,7 @@
 import { Card, Image } from "antd";
 import React from "react";
 
-const CustomerCard = () => {
+export const CustomerCard = () => {
   return (
     <div className="border flex  justify-between  border-[#EBEBEB] w-[379px] h-[221px]  py-10 px-10">
       <div className="before:absolute ">
@@ -26,4 +26,19 @@ const CustomerCard = () => {
   );
 };
 
-export default CustomerCard;
+
+
+export const CustomCard = ()  => {
+return (
+  <div className="flex flex-col justify-center items-center gap-4">
+  <div className="rounded-full bg-[#67C6B0]  w-[124px] h-[124px] flex justify-center items-center">
+    <img src="/images/icon.png" />
+  </div>
+  <h2 className="font-medium text-xl	">customer</h2>
+  <p className="text-center text-[#ACACAC] text-base	w-[325px]">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+    mollis sapien. Sed placerat justo quis nisl semper, nec
+  </p>
+</div>
+)
+}

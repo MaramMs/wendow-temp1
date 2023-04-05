@@ -12,7 +12,7 @@ import CardProduct from "@/components/CardProduct";
 import Banner from "@/components/Banner";
 import MostProductCard from "@/components/MostProductCard";
 import Line from "@/components/Line";
-import CustomerCard from "@/components/CustomerCard";
+import{CustomerCard, CustomCard } from "@/components/CustomerCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -173,6 +173,26 @@ export default function Home() {
 
             <Col className="gutter-row " span={8}>
             <CustomerCard />
+            </Col>
+           </Row>
+          
+           <Row 
+            gutter={{
+              xs: 8,
+              sm: 16,
+              md: 24,
+              lg: 32,
+            }}
+            className="mt-40"
+           >
+            <Col span={8}  className="gutter-row">
+            <CustomCard />
+            </Col>
+            <Col span={8}  className="gutter-row">
+            <CustomCard />
+            </Col>
+            <Col span={8}  className="gutter-row">
+            <CustomCard />
             </Col>
            </Row>
         
