@@ -19,39 +19,33 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
-      <main>
+      <main className="overflow-x-hidden	">
         <Wrapper>
           <Row
             gutter={{
               xs: 8,
               sm: 16,
               md: 24,
-              lg: 32,
+              lg: 24,
             }}
           >
             <Col
-              className="gutter-row border-b-[0.5px] border-[#E4E4E4] relative"
-              span={18}
+              className="gutter-row "
+              lg={18}
+              sm={12}
             >
-              <div className="flex gap-5  flex-col ">
+              <div className="flex gap-5  pb-14  ">
                 <div className="flex gap-5">
                   <Card />
                   <Card />
                   <Card />
                 </div>
-                <div className="flex justify-between items-center ">
-                  <span className="absolute bottom-0 right-0 text-xl	font-semibold border-b-[3px] border-[#7251A2] pb-4	">
-                    last product
-                  </span>
-                  <span className="absolute bottom-4 left-0 text-[#7251A2] font-[16px]">
-                    more
-                  </span>
-                </div>
               </div>
+               <Line right='Last product' left='more' width='882px' />
             </Col>
-            <Col className="gutter-row" span={6}>
+            <Col className="gutter-row max-sm:hidden" lg={6}>
               <CategoriesCard />
             </Col>
           </Row>
@@ -65,7 +59,19 @@ export default function Home() {
                 lg: 32,
               }}
             >
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" lg={6} sm={6}>
+                <CardProduct />
+              </Col>
+              <Col className="gutter-row" lg={6} sm={6}>
+                <CardProduct />
+              </Col>
+              <Col className="gutter-row" lg={6} sm={6}>
+                <CardProduct />
+              </Col>
+              <Col className="gutter-row" lg={6} sm={6}>
+                <CardProduct />
+              </Col>
+              {/* <Col className="gutter-row" span={6}>
                 <CardProduct />
               </Col>
               <Col className="gutter-row" span={6}>
@@ -76,22 +82,10 @@ export default function Home() {
               </Col>
               <Col className="gutter-row" span={6}>
                 <CardProduct />
-              </Col>
-              <Col className="gutter-row" span={6}>
-                <CardProduct />
-              </Col>
-              <Col className="gutter-row" span={6}>
-                <CardProduct />
-              </Col>
-              <Col className="gutter-row" span={6}>
-                <CardProduct />
-              </Col>
-              <Col className="gutter-row" span={6}>
-                <CardProduct />
-              </Col>
+              </Col> */}
             </Row>
           </div>
-          <Banner />
+          {/* <Banner />
           <div className="mt-[172px] ">
             <Line right='More Sale' left='more'/>
             <Row
@@ -196,7 +190,7 @@ export default function Home() {
             </Col>
            </Row>
         
-          </div>
+          </div> */}
         </Wrapper>
       </main>
     </>
