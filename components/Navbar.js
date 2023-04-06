@@ -184,7 +184,7 @@ export const SideBar = ({ setToggle }) => {
     setToggle(false);
   };
   return (
-    <div className="bg-white z-40 w-[200px] absolute top-0 bottom-0 left-0  rounded-sm flex p-10 items-center flex-col gap-10 shadow-2xl">
+    <div className="bg-white z-40 w-[200px]  top-0 bottom-0 left-0  rounded-sm flex p-10 items-center flex-col gap-10 shadow-2xl fixed">
       <CloseCircleOutlined
         className="right-2 absolute top-2 text-[18px] text-[#67C6B0]"
         onClick={closeHandle}
