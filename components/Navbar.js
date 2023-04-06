@@ -22,7 +22,7 @@ function Navbar() {
   ];
   return (
     <Wrapper>
-      <nav className="flex items-center gap-40">
+      <nav className="flex items-center gap-40 max-sm:hidden">
         <Link href="/" className="mt-[-36px]">
           <Image src="/logo.png" width="64" height="74" />
         </Link>
