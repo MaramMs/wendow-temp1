@@ -50,7 +50,7 @@ export default function Home() {
             </Col>
           </Row>
 
-          <div className="mt-12">
+          <div className="mt-12 max-sm:px-5">
             <Row
               gutter={{
                 xs: 8,
@@ -71,55 +71,57 @@ export default function Home() {
               <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
               </Col>
-              {/* <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
               </Col>
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
               </Col>
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
               </Col>
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
-              </Col> */}
+              </Col>
+            
             </Row>
           </div>
-          {/* <Banner />
-          <div className="mt-[172px] ">
+         
+          <Banner />
+          <div className="mt-[172px] max-sm:px-5">
             <Line right='More Sale' left='more'/>
             <Row
               gutter={{
                 xs: 8,
-                sm: 16,
+                sm: 18,
                 md: 24,
                 lg: 32,
               }}
               className="pt-10"
             >
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
 
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row " span={8}>
+              <Col className="gutter-row "  lg={8} sm={6}>
                 <MostProductCard />
               </Col>
             </Row>
           </div>
 
-          <div className="mt-[139px]">
+          <div className="mt-[139px] max-sm:px-5 max-sm:mt-0">
             <Row
               gutter={{
                 xs: 8,
@@ -128,7 +130,7 @@ export default function Home() {
                 lg: 32,
               }}
             >
-              <Col span={12} className="gutter-row ">
+              <Col sm={12} className="gutter-row max-sm:hidden">
                 <Image
                   src="/images/iphone.png"
                   width="579"
@@ -136,7 +138,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </Col>
-              <Col span={12}>
+              <Col sm={12} className=" gutter-row">
                 <Image src='/images/lap.png'
                    width="579"
                    height='230'
@@ -146,7 +148,7 @@ export default function Home() {
             </Row>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-20 max-sm:px-5 ">
             <Line right='Customers' />
           <Row 
              gutter={{
@@ -157,15 +159,15 @@ export default function Home() {
             }}
             className="pt-10"
           >
-            <Col className="gutter-row " span={8}>
+            <Col className="gutter-row " lg={8}>
             <CustomerCard />
             </Col>
 
-            <Col className="gutter-row " span={8} >
+            <Col className="gutter-row " lg={8} >
             <CustomerCard />
             </Col>
 
-            <Col className="gutter-row " span={8}>
+            <Col className="gutter-row " lg={8}>
             <CustomerCard />
             </Col>
            </Row>
@@ -177,20 +179,20 @@ export default function Home() {
               md: 24,
               lg: 32,
             }}
-            className="mt-40"
+            className="mt-40 max-sm:mt-0"
            >
-            <Col span={8}  className="gutter-row">
+            <Col lg={8}  className="gutter-row">
             <CustomCard />
             </Col>
-            <Col span={8}  className="gutter-row">
+            <Col lg={8}  className="gutter-row">
             <CustomCard />
             </Col>
-            <Col span={8}  className="gutter-row">
+            <Col lg={8}  className="gutter-row">
             <CustomCard />
             </Col>
            </Row>
         
-          </div> */}
+          </div> 
         </Wrapper>
       </main>
     </>
