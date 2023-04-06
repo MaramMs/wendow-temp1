@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <main className="overflow-x-hidden	">
         <Wrapper>
