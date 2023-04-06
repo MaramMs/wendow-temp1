@@ -13,12 +13,15 @@ import Banner from "@/components/Banner";
 import MostProductCard from "@/components/MostProductCard";
 import Line from "@/components/Line";
 import{CustomerCard, CustomCard } from "@/components/CustomerCard";
+import Language from "@/components/Language";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+        <Language/> 
+
       <Navbar />
       <Hero />
       <main className="overflow-x-hidden	">

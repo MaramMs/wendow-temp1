@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "./Wrapper";
 import React, { useState } from "react";
-import { Button, Dropdown, Space, Layout, Menu, theme, Input } from "antd";
+import { Button, Dropdown, Space,Input } from "antd";
 import {
   BarsOutlined,
   DownOutlined,
@@ -10,7 +10,9 @@ import {
   ShoppingCartOutlined,
   HeartOutlined,
   CloseCircleOutlined,
+  GlobalOutlined,
 } from "@ant-design/icons";
+import Language from "./Language";
 
 function Navbar() {
   const items = [
@@ -250,6 +252,21 @@ export const SideBar = ({ setToggle }) => {
           </Link>
         </li>
       </ul>
+      <Dropdown
+    menu={{
+      items,
+    }}
+
+    
+  >
+    <a onClick={(e) => e.preventDefault()} className='text-[#7251A2]'>
+      <Space className='flex items-center justify-center'>
+      <GlobalOutlined className='text-[#7251A2] text-[18px]'/>
+        Arabic
+        <DownOutlined className='text-[#7251A2]'/>
+      </Space>
+    </a>
+  </Dropdown>
 
       <div className="flex justify-between items-center">
         <Link
@@ -267,6 +284,7 @@ export const SideBar = ({ setToggle }) => {
           تسجيل دخول
         </Link>
       </div>
+
     </div>
   );
 };
