@@ -2,19 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "./Wrapper";
 import React, { useState } from "react";
-import { Button, Dropdown, Space, Layout, Menu, theme } from "antd";
+import { Button, Dropdown, Space, Layout, Menu, theme, Input } from "antd";
 import {
   BarsOutlined,
   DownOutlined,
   SearchOutlined,
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
-  TeamOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+  ShoppingCartOutlined,
+  HeartOutlined,
+  CloseCircleOutlined,
 } from "@ant-design/icons";
 
 function Navbar() {
@@ -32,8 +27,6 @@ function Navbar() {
       ),
     },
   ];
-  const { Header, Content, Footer, Sider } = Layout;
-
   const [toggle, setToggle] = useState(false);
   const handleClick = () => {
     return setToggle(!toggle);
@@ -50,13 +43,13 @@ function Navbar() {
               className="max-sm:w-[54px] max-sm:h-[62px]"
             />
           </Link>
-    
-         <Button
+
+          <Button
             className="flex justify-center items-center bg-[#7251A2] rounded-[5px] max-sm:w-[43px] max-sm:h-[43px] lg:hidden"
             onClick={handleClick}
           >
             <BarsOutlined className="text-[23.62px] text-[#fff]" />
-          </Button> 
+          </Button>
           <div className="grow  p-2 flex justify-between items-center flex-wrap max-sm:hidden">
             <div className="relative flex items-center">
               <input
@@ -160,187 +153,120 @@ function Navbar() {
           </div>
         </nav>
       </Wrapper>
-      {toggle && <SideBar />}
+      {toggle && <SideBar setToggle={setToggle} />}
     </>
   );
 }
 
 export default Navbar;
 
-export function SideBar() {
-  const { Header, Content, Footer, Sider } = Layout;
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-  // // const items = [
-  // //   UserOutlined,
-  // //   VideoCameraOutlined,
-  // //   UploadOutlined,
-  // //   BarChartOutlined,
-  // //   CloudOutlined,
-  // //   AppstoreOutlined,
-  // //   TeamOutlined,
-  // //   ShopOutlined,
-  // // ].map((icon, index) => ({
-  // //   key: String(index + 1),
-  // //   icon: React.createElement(icon),
-  // //   label: `nav ${index + 1}`,
-  // // }));
-  // // return (
-  // //   <Layout hasSider>
-  // //     <Sider
-  // //       style={{
-  // //         overflow: "auto",
-  // //         height: "100vh",
-  // //         position: "fixed",
-  // //         left: 0,
-  // //         top: 0,
-  // //         bottom: 0,
-  // //       }}
-  // //     >
-  // //       <div
-  // //         style={{
-  // //           height: 32,
-  // //           margin: 16,
-  // //           background: "rgba(255, 255, 255, 0.2)",
-  // //         }}
-  // //       />
-  // //       <Menu
-  // //         theme="dark"
-  // //         mode="inline"
-  // //         defaultSelectedKeys={["4"]}
-  // //         items={items}
-  // //       />
-  // //     </Sider>
-  // //     {/* <Layout
-  // //       className="site-layout"
-  // //       style={{
-  // //         marginLeft: 200,
-  // //       }}
-  // //     >
-  // //       <Header
-  // //         style={{
-  // //           padding: 0,
-  // //           background: colorBgContainer,
-  // //         }}
-  // //       />
-  // //       <Content
-  // //         style={{
-  // //           margin: "24px 16px 0",
-  // //           overflow: "initial",
-  // //         }}
-  // //       >
-  // //         <div
-  // //           style={{
-  // //             padding: 24,
-  // //             textAlign: "center",
-  // //             background: colorBgContainer,
-  // //           }}
-  // //         >
-  // //           <p>long content</p>
-  // //           {
-  // //             // indicates very long content
-  // //             Array.from(
-  // //               {
-  // //                 length: 100,
-  // //               },
-  // //               (_, index) => (
-  // //                 <React.Fragment key={index}>
-  // //                   {index % 20 === 0 && index ? "more" : "..."}
-  // //                   <br />
-  // //                 </React.Fragment>
-  // //               )
-  // //             )
-  // //           }
-  // //         </div>
-  // //       </Content>
-  // //       <Footer
-  // //         style={{
-  // //           textAlign: "center",
-  // //         }}
-  // //       >
-  // //         Ant Design ©2023 Created by Ant UED
-  // //       </Footer>
-  // //     </Layout> */}
-  //   </Layout>
+export const SideBar = ({ setToggle }) => {
+  const { Search } = Input;
+  const onSearch = (value) => console.log(value);
+
   const items = [
-    UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
-    BarChartOutlined,
-    CloudOutlined,
-    AppstoreOutlined,
-    TeamOutlined,
-    ShopOutlined,
-  ].map((icon, index) => ({
-    key: String(index + 1),
-    icon: React.createElement(icon),
-    label: `nav ${index + 1}`,
-  }));
+    {
+      key: "1",
+      label: (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.antgroup.com"
+        >
+          1st menu item
+        </a>
+      ),
+    },
+  ];
+  const closeHandle = () => {
+    setToggle(false);
+  };
   return (
-    <Layout 
-  
-    >
-      {/* <Sider
-        style={{
-          overflow: "auto",
-          height: "100vh",
-          position: "fixed",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          zIndex: 40,
-        }}
-      >
-        <div
-          style={{
-            height: 32,
-            margin: 16,
-            background: "rgba(255, 255, 255, 0.2)",
-          }}
+    <div className="bg-white z-40 w-[200px] absolute top-0 bottom-0 left-0  rounded-sm flex p-10 items-center flex-col gap-10 shadow-2xl">
+      <CloseCircleOutlined
+        className="right-2 absolute top-2 text-[18px] text-[#67C6B0]"
+        onClick={closeHandle}
+      />
+      <Link href="/" className="mt-[-36px] max-sm:mt-0">
+        <Image
+          src="/logo.png"
+          width="64"
+          height="74"
+          className="max-sm:w-[54px] max-sm:h-[62px]"
         />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["4"]}
-          items={items}
+      </Link>
+      <div className="relative flex items-center">
+        <Search
+          placeholder="input search text"
+          onSearch={onSearch}
+          enterButton
+          className="bg-[#7251A2] rounded-[8px] w-[150px]"
         />
-      </Sider> */}
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="relative">
+          <HeartOutlined className="text-[#67C6B0] text-[35px]" />
+          <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white ">
+            1
+          </span>
+        </div>
+        <span className="border-l-2  h-7 border-slate-300	"></span>
+        <div className="relative">
+          <ShoppingCartOutlined className="text-[#67C6B0] text-[35px]" />
+          <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white">
+            1
+          </span>
+        </div>
+      </div>
 
+      <ul className="flex justify-between pt-10 w-[200px] items-center flex-col gap-5">
+        <li>
+          <Link href="/" className="text-[#7251A2] text-sm">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Dropdown
+            menu={{
+              items,
+            }}
+          >
+            <a onClick={(e) => e.preventDefault()}>
+              <Space className="text-[#7251A2] text-sm">
+                category
+                <DownOutlined />
+              </Space>
+            </a>
+          </Dropdown>
+        </li>
+        <li>
+          <Link href="/" className="text-[#7251A2] text-sm">
+            about
+          </Link>
+        </li>
+        <li>
+          <Link href="/" className="text-[#7251A2] text-sm">
+            contact us
+          </Link>
+        </li>
+      </ul>
 
-      <Sider
-        breakpoint="lg"
-        // collapsedWidth="0"
-        // onBreakpoint={(broken) => {
-        //   console.log(broken);
-        // }}
-        // onCollapse={(collapsed, type) => {
-        //   console.log(collapsed, type);
-        // }}
-        style={{
-          overflow: "auto",
-          height: "100vh",
-          position: "fixed",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          zIndex: 40,
-        }}
-      >
-        <div className="logo" />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['4']}
-          items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-            (icon, index) => ({
-              key: String(index + 1),
-              icon: React.createElement(icon),
-              label: `nav ${index + 1}`,
-            }),
-          )}
-        />
-      </Sider>
-    </Layout>
+      <div className="flex justify-between items-center">
+        <Link
+          href="/"
+          className="text-[#7251A2] font-normal	text-sm	max-sm:text-[12px]"
+        >
+          {" "}
+          تسجيل
+        </Link>
+        <span className="text-black font-bold	max-sm:text-[12px]">او</span>
+        <Link
+          href="/"
+          className="text-[#7251A2] font-normal	text-sm 	max-sm:text-[12px]"
+        >
+          تسجيل دخول
+        </Link>
+      </div>
+    </div>
   );
-}
+};

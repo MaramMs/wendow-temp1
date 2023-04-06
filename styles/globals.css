@@ -7,3 +7,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:where(.css-dev-only-do-not-override-1vtf12y).ant-layout .ant-layout-sider-children{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+@media (min-width: 768px) {
+  :where(.css-dev-only-do-not-override-1vtf12y).ant-layout .ant-layout-sider-children{
+display: none;
+  }
+  .ant-layout-sider {
+    display: none;
+  }
+
+}
