@@ -3,7 +3,7 @@ import Link from "next/link";
 import Wrapper from "./Wrapper";
 import { useState } from "react";
 import { Button, Dropdown, Space } from "antd";
-import { DownOutlined, SearchOutlined } from "@ant-design/icons";
+import { BarsOutlined, DownOutlined, SearchOutlined } from "@ant-design/icons";
 
 function Navbar() {
   const items = [
@@ -22,11 +22,14 @@ function Navbar() {
   ];
   return (
     <Wrapper>
-      <nav className="flex items-center gap-40 max-sm:hidden">
-        <Link href="/" className="mt-[-36px]">
-          <Image src="/logo.png" width="64" height="74" />
+      <nav className="flex items-center gap-40 max-sm:justify-around max-sm:flex-row-reverse">
+        <Link href="/" className="mt-[-36px] max-sm:mt-0">
+          <Image src="/logo.png" width="64" height="74" className="max-sm:w-[54px] max-sm:h-[62px]"/>
         </Link>
-        <div className="grow  p-2 flex justify-between items-center flex-wrap">
+    <Button className="flex justify-center items-center bg-[#7251A2] rounded-[5px] max-sm:w-[43px] max-sm:h-[43px] lg:hidden ">
+      <BarsOutlined  className="text-[23.62px] text-[#fff]"/>
+    </Button>
+        <div className="grow  p-2 flex justify-between items-center flex-wrap max-sm:hidden">
     <div className="relative flex items-center">
     <input
             placeholder="search now"
