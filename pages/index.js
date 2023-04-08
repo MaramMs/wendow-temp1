@@ -12,15 +12,27 @@ import CardProduct from "@/components/CardProduct";
 import Banner from "@/components/Banner";
 import MostProductCard from "@/components/MostProductCard";
 import Line from "@/components/Line";
-import{CustomerCard, CustomCard } from "@/components/CustomerCard";
+import { CustomerCard, CustomCard } from "@/components/CustomerCard";
 import Language from "@/components/Language";
+import CustomCarousel from "@/components/CustomCarousel";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const cardData = [
+    { title: "Card 1", description: "Description for Card 1" },
+    { title: "Card 2", description: "Description for Card 2" },
+    { title: "Card 3", description: "Description for Card 3" },
+    { title: "Card 4", description: "Description for Card 4" },
+    { title: "Card 5", description: "Description for Card 5" },
+    { title: "Card 6", description: "Description for Card 6" },
+    { title: "Card 4", description: "Description for Card 4" },
+    { title: "Card 5", description: "Description for Card 5" },
+    { title: "Card 6", description: "Description for Card 6" },
+  ];
   return (
     <>
-        <Language/> 
+      <Language />
 
       <Navbar />
       <Hero />
@@ -34,11 +46,7 @@ export default function Home() {
               lg: 24,
             }}
           >
-            <Col
-              className="gutter-row "
-              lg={18}
-              sm={12}
-            >
+            <Col className="gutter-row " lg={18} sm={12}>
               <div className="flex gap-5  pb-14  ">
                 <div className="flex gap-5">
                   <Card />
@@ -46,7 +54,7 @@ export default function Home() {
                   <Card />
                 </div>
               </div>
-               <Line right='Last product' left='more' width='882px' />
+              <Line right="Last product" left="more" width="882px" />
             </Col>
             <Col className="gutter-row max-sm:hidden" lg={6}>
               <CategoriesCard />
@@ -86,14 +94,13 @@ export default function Home() {
               <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />
               </Col>
-            
             </Row>
           </div>
-         
+
           <Banner />
-          <div className="mt-[172px] max-sm:px-5">
-            <Line right='More Sale' left='more'/>
-            <Row
+          <div className="mt-[172px] max-sm:px-5 ">
+            <Line right="More Sale" left="more" />
+            {/* <Row
               gutter={{
                 xs: 8,
                 sm: 18,
@@ -102,26 +109,34 @@ export default function Home() {
               }}
               className="pt-10"
             >
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
 
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-              <Col className="gutter-row "  lg={8} sm={6}>
+              <Col className="gutter-row " lg={8} sm={6}>
                 <MostProductCard />
               </Col>
-            </Row>
+            </Row> */}
+
+<CustomCarousel className='max-sm:py-10 sm:py-10'>
+              {cardData.map((data, index) => (
+                <MostProductCard key={index} title={data.title}>
+                  {data.description}
+                </MostProductCard>
+              ))}
+            </CustomCarousel>
           </div>
 
           <div className="mt-[139px] max-sm:px-5 max-sm:mt-0">
@@ -137,23 +152,24 @@ export default function Home() {
                 <Image
                   src="/images/iphone.png"
                   width="579"
-                  height='230'
+                  height="230"
                   className="object-cover"
                 />
               </Col>
               <Col sm={12} className=" gutter-row">
-                <Image src='/images/lap.png'
-                   width="579"
-                   height='230'
-                   className="object-cover"
+                <Image
+                  src="/images/lap.png"
+                  width="579"
+                  height="230"
+                  className="object-cover"
                 />
               </Col>
             </Row>
           </div>
 
-          <div className="mt-20 max-sm:px-5 ">
-            <Line right='Customers' />
-          <Row 
+          <div className="mt-20 max-sm:px-5  ">
+            <Line right="Customers" />
+            {/* <Row 
              gutter={{
               xs: 8,
               sm: 16,
@@ -173,29 +189,35 @@ export default function Home() {
             <Col className="gutter-row " lg={8}>
             <CustomerCard />
             </Col>
-           </Row>
-          
-           <Row 
-            gutter={{
-              xs: 8,
-              sm: 16,
-              md: 24,
-              lg: 32,
-            }}
-            className="mt-40 max-sm:mt-0"
-           >
-            <Col lg={8}  className="gutter-row">
-            <CustomCard />
-            </Col>
-            <Col lg={8}  className="gutter-row">
-            <CustomCard />
-            </Col>
-            <Col lg={8}  className="gutter-row">
-            <CustomCard />
-            </Col>
-           </Row>
-        
-          </div> 
+           </Row> */}
+            <CustomCarousel className='max-sm:py-10 sm:py-10'>
+              {cardData.map((data, index) => (
+                <CustomerCard key={index} title={data.title}>
+                  {data.description}
+                </CustomerCard>
+              ))}
+            </CustomCarousel>
+
+            <Row
+              gutter={{
+                xs: 8,
+                sm: 16,
+                md: 24,
+                lg: 32,
+              }}
+              className="mt-40 max-sm:mt-10 "
+            >
+              <Col lg={8} className="gutter-row">
+                <CustomCard />
+              </Col>
+              <Col lg={8} className="gutter-row">
+                <CustomCard />
+              </Col>
+              <Col lg={8} className="gutter-row">
+                <CustomCard />
+              </Col>
+            </Row>
+          </div>
         </Wrapper>
       </main>
     </>

@@ -1,9 +1,11 @@
 import { Card, Image } from "antd";
 import React from "react";
+import CustomCarousel from "./CustomCarousel";
 
 export const CustomerCard = () => {
   return (
-    <div className="border flex  justify-between  border-[#EBEBEB] w-[379px] h-[221px]  py-10 px-10 max-sm:w-[358px] max-sm:h-[221px] mb-10 rounded-[8px]">
+  
+     <div className="border flex  justify-between  border-[#EBEBEB] w-[379px] h-[221px]  py-10 px-10 max-sm:w-[358px] max-sm:h-[221px] mb-10 rounded-[8px] sm:m-auto max-sm:m-auto ">
       <div className="before:absolute ">
         <img src="/images/before.png" />
       </div>
@@ -13,7 +15,7 @@ export const CustomerCard = () => {
           className="object-cover w-[66px] h-[66px] rounded-full relative"
         />
 
-        <p className="text-center	text-[14px] text-black w-[267px] ">
+        <p className="text-center	text-[14px] text-black sm:text-[12px] ">
           {" "}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
           amet mollis sapien. Sed placerat justo quis nisl semper, nec
@@ -23,6 +25,7 @@ export const CustomerCard = () => {
         </span>
       </div>
     </div>
+ 
   );
 };
 
