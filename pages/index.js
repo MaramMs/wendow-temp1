@@ -45,16 +45,25 @@ export default function Home() {
               md: 24,
               lg: 24,
             }}
+            className="max-sm:px-5"
           >
             <Col className="gutter-row " lg={18} sm={12}>
-              <div className="flex gap-5  pb-14  ">
-                <div className="flex gap-5">
+          
+              
+                <Row gutter={[16,16]} className="pb-14">
+                  <Col span={8}>
                   <Card />
+                  </Col>
+                  <Col span={8}>
                   <Card />
+                  </Col>
+                  <Col span={8}>
                   <Card />
-                </div>
-              </div>
-              <Line right="Last product" left="more" width="882px" />
+                  </Col>
+                </Row>
+               
+              <Line right="Last product" left="more"  />
+
             </Col>
             <Col className="gutter-row max-sm:hidden" lg={6}>
               <CategoriesCard />
