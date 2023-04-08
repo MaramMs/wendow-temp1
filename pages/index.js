@@ -48,22 +48,19 @@ export default function Home() {
             className="max-sm:px-5"
           >
             <Col className="gutter-row " lg={18} sm={12}>
-          
-              
-                <Row gutter={[16,16]} className="pb-14">
-                  <Col span={8}>
+              <Row gutter={[16, 16]} className="pb-14">
+                <Col span={8}>
                   <Card />
-                  </Col>
-                  <Col span={8}>
+                </Col>
+                <Col span={8}>
                   <Card />
-                  </Col>
-                  <Col span={8}>
+                </Col>
+                <Col span={8}>
                   <Card />
-                  </Col>
-                </Row>
-               
-              <Line right="Last product" left="more"  />
+                </Col>
+              </Row>
 
+              <Line right="Last product" left="more" />
             </Col>
             <Col className="gutter-row max-sm:hidden" lg={6}>
               <CategoriesCard />
@@ -139,7 +136,7 @@ export default function Home() {
               </Col>
             </Row> */}
 
-<CustomCarousel className='max-sm:py-10 sm:py-10'>
+            <CustomCarousel className="max-sm:py-10 sm:py-10">
               {cardData.map((data, index) => (
                 <MostProductCard key={index} title={data.title}>
                   {data.description}
@@ -199,7 +196,7 @@ export default function Home() {
             <CustomerCard />
             </Col>
            </Row> */}
-            <CustomCarousel className='max-sm:py-10 sm:py-10'>
+            <CustomCarousel className="max-sm:py-10 sm:py-10">
               {cardData.map((data, index) => (
                 <CustomerCard key={index} title={data.title}>
                   {data.description}
