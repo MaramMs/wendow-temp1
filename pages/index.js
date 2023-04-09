@@ -35,7 +35,11 @@ export default function Home() {
       <Language />
 
       <Navbar />
-      <Hero />
+   <Carousel >
+   <Hero />
+   <Hero />
+   <Hero />
+   </Carousel>
       <main className="overflow-x-hidden	">
         <Wrapper>
           <Row
