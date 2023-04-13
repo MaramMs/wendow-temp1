@@ -5,10 +5,12 @@ import {
 } from "@ant-design/icons";
 import { Image } from "antd";
 import React from "react";
+import Wrapper from "./Wrapper";
 
 const MostProductCard = () => {
   return (
-    <div className="w-[390px] h-383px flex   mb-10 justify-between max-sm:w-[170px] ">
+
+<div className="w-[390px] h-383px flex   mb-10 justify-between max-sm:w-[170px] ">
       <img
         alt="phone"
         src="/images/product1.png"
@@ -50,6 +52,7 @@ const MostProductCard = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

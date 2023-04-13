@@ -33,17 +33,13 @@ export default function Home() {
   ];
   return (
     <>
-      <Language />
-
-      <Navbar />
-   <Carousel >
-   <Hero />
+   <Carousel>
+   <Hero /> 
    <Hero />
    <Hero />
    </Carousel>
-      <main className="overflow-x-hidden	">
-        <Wrapper>
-          <Row
+  <Wrapper>
+  <Row
             gutter={{
               xs: 8,
               sm: 16,
@@ -71,8 +67,10 @@ export default function Home() {
               <CategoriesCard />
             </Col>
           </Row>
+  
 
-          <div className="mt-12 max-sm:px-5">
+         
+         <div className="mt-12 max-sm:px-5">
             <Row
               gutter={{
                 xs: 8,
@@ -107,6 +105,7 @@ export default function Home() {
               </Col>
             </Row>
           </div>
+        
 
           <Banner />
           <div className="mt-[172px] max-sm:px-5 ">
@@ -178,9 +177,7 @@ export default function Home() {
               </Col>
             </Row>
           </div>
-        </Wrapper>
-      </main>
-      <Footer />
+          </Wrapper>
     </>
   );
 }
