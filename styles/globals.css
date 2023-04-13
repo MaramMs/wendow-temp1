@@ -15,4 +15,6 @@ height: 7px !important;
 color: #7251A2 !important;
 border-radius: 100px !important;
 }
-
+:where(.css-dev-only-do-not-override-1vtf12y).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button {
+  background-color: #67C6B0;
+}

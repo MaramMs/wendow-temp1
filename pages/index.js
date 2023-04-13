@@ -15,6 +15,7 @@ import Line from "@/components/Line";
 import { CustomerCard, CustomCard } from "@/components/CustomerCard";
 import Language from "@/components/Language";
 import CustomCarousel from "@/components/CustomCarousel";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -110,39 +111,9 @@ export default function Home() {
           <Banner />
           <div className="mt-[172px] max-sm:px-5 ">
             <Line right="More Sale" left="more" />
-            {/* <Row
-              gutter={{
-                xs: 8,
-                sm: 18,
-                md: 24,
-                lg: 32,
-              }}
-              className="pt-10"
-            >
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-              <Col className="gutter-row " lg={8} sm={6}>
-                <MostProductCard />
-              </Col>
-            </Row> */}
-
-            <CustomCarousel className="max-sm:py-10 sm:py-10">
+            <CustomCarousel className="max-sm:py-10 sm:py-10" slidesNum={2}>
               {cardData.map((data, index) => (
-                <MostProductCard key={index} title={data.title}>
+                <MostProductCard key={index} title={data.title} >
                   {data.description}
                 </MostProductCard>
               ))}
@@ -179,30 +150,9 @@ export default function Home() {
 
           <div className="mt-20 max-sm:px-5  ">
             <Line right="Customers" />
-            {/* <Row 
-             gutter={{
-              xs: 8,
-              sm: 16,
-              md: 24,
-              lg: 32,
-            }}
-            className="pt-10"
-          >
-            <Col className="gutter-row " lg={8}>
-            <CustomerCard />
-            </Col>
-
-            <Col className="gutter-row " lg={8} >
-            <CustomerCard />
-            </Col>
-
-            <Col className="gutter-row " lg={8}>
-            <CustomerCard />
-            </Col>
-           </Row> */}
-            <CustomCarousel className="max-sm:py-10 sm:py-10">
+            <CustomCarousel className="max-sm:py-10 sm:py-10" slideNum={1}>
               {cardData.map((data, index) => (
-                <CustomerCard key={index} title={data.title}>
+                <CustomerCard key={index} title={data.title} >
                   {data.description}
                 </CustomerCard>
               ))}
@@ -230,6 +180,7 @@ export default function Home() {
           </div>
         </Wrapper>
       </main>
+      <Footer />
     </>
   );
 }
