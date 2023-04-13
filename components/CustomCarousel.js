@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const CustomCarousel = ({children}) => {
+const CustomCarousel = ({children ,title}) => {
+  console.log(title == 'product' ? 2 :1);
   const settings = {
     className:'custom',
     dots: true,
@@ -37,8 +38,8 @@ const CustomCarousel = ({children}) => {
       {
         breakpoint: 576, // for laps
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: title == 'product' ? 2 :1,
+          slidesToScroll: title == 'product' ? 2 :1,
         },
       },
     ],
@@ -56,30 +57,3 @@ const CustomCarousel = ({children}) => {
 export default CustomCarousel
 
 
-// export const MyPage = () => {
-//   const cardData = [
-//     { title: "Card 1", description: "Description for Card 1" },
-//     { title: "Card 2", description: "Description for Card 2" },
-//     { title: "Card 3", description: "Description for Card 3" },
-//     { title: "Card 4", description: "Description for Card 4" },
-//     { title: "Card 5", description: "Description for Card 5" },
-//     { title: "Card 6", description: "Description for Card 6" },
-//     { title: "Card 4", description: "Description for Card 4" },
-//     { title: "Card 5", description: "Description for Card 5" },
-//     { title: "Card 6", description: "Description for Card 6" },
-//   ];
-
-//   return (
-//     // <Row>
-//         <CustomCarousel>
-//       {cardData.map((data, index) => (
-//         // <Col lg={3} md={8}>
-//         <CustomerCard key={index} title={data.title}>
-//           {data.description}
-//         </CustomerCard>
-//         // </Col>
-//       ))}
-//     </CustomCarousel>
-//       // </Row>
-//   );
-// };

@@ -111,7 +111,7 @@ export default function Home() {
           <Banner />
           <div className="mt-[172px] max-sm:px-5 ">
             <Line right="More Sale" left="more" />
-            <CustomCarousel className="max-sm:py-10 sm:py-10" slidesNum={2}>
+            <CustomCarousel className="max-sm:py-10 sm:py-10" slidesNum={2} title='product'>
               {cardData.map((data, index) => (
                 <MostProductCard key={index} title={data.title} >
                   {data.description}
@@ -150,7 +150,7 @@ export default function Home() {
 
           <div className="mt-20 max-sm:px-5  ">
             <Line right="Customers" />
-            <CustomCarousel className="max-sm:py-10 sm:py-10" slideNum={1}>
+            <CustomCarousel className="max-sm:py-10 sm:py-10" slideNum={1 } title='customer'>
               {cardData.map((data, index) => (
                 <CustomerCard key={index} title={data.title} >
                   {data.description}

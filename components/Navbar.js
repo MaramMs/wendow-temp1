@@ -39,7 +39,7 @@ function Navbar() {
         <nav className="flex items-center gap-40 max-sm:justify-around max-sm:flex-row-reverse">
           <Link href="/" className="mt-[-36px] max-sm:mt-0">
             <Image
-              src="/logo.png"
+              src="/images/logo.png"
               width="64"
               height="74"
               className="max-sm:w-[54px] max-sm:h-[62px]"
