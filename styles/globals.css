@@ -18,3 +18,25 @@ border-radius: 100px !important;
 :where(.css-dev-only-do-not-override-1vtf12y).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button {
   background-color: #67C6B0;
 }
+
+:where(.css-dev-only-do-not-override-1vtf12y).ant-tabs >.ant-tabs-nav .ant-tabs-nav-list, :where(.css-dev-only-do-not-override-1vtf12y).ant-tabs >div>.ant-tabs-nav .ant-tabs-nav-list{
+  gap: 38px;
+}
+:where(.css-dev-only-do-not-override-1vtf12y).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  font-weight: 600;
+  font-size: 14px;
+  color:#67C6B0 !important;
+}
+:where(.css-dev-only-do-not-override-1vtf12y).ant-tabs .ant-tabs-ink-bar{
+  background-color: #67C6B0;
+}
+:where(.css-dev-only-do-not-override-1vtf12y).ant-tabs .ant-tabs-tab:hover{
+  color: #67C6B0;
+}
+
+:where(.css-dev-only-do-not-override-1vtf12y).ant-pagination .ant-pagination-next .ant-pagination-item-link{
+  color: #67C6B0;
+}
+.ant-pagination a[rel~='nofollow'] {
+outline:none !important;
+}
