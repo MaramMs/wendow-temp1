@@ -5,7 +5,7 @@ import PhoneInput from "react-phone-number-input";
 import flags from 'react-phone-number-input/flags'
 
 import 'react-phone-number-input/style.css'
-const CustomForm = () => {
+const CustomForm = ({type}) => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
@@ -14,7 +14,9 @@ const CustomForm = () => {
   return (
     <div className="flex justify-center flex-col items-center mb-[272px]">
       <h1 className="text-[#000] text-[20px] font-semibold mb-[73px]">
-        Login in
+        {
+            type === 'login' ? 'Login ': 'Sign Up'
+        }
       </h1>
       <Form
         name="normal_login"
@@ -24,6 +26,29 @@ const CustomForm = () => {
         }}
         onFinish={onFinish}
       >
+        {
+            type === 'sign-up' && (
+                <Form.Item
+                name="username"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your Password!",
+                  },
+                ]}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
+                <label className="text-[#ACACAC] text-[10px] font-normal ">
+                  User Name
+                </label>
+                <Input
+                  type="text"
+                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+                />
+              </Form.Item>
+            )
+        }
         <Form.Item
           name="username"
           rules={[
@@ -49,6 +74,29 @@ const CustomForm = () => {
       />
       
         </Form.Item>
+        {
+            type === 'sign-up' && (
+                <Form.Item
+                name="email"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your Password!",
+                  },
+                ]}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
+                <label className="text-[#ACACAC] text-[10px] font-normal ">
+                  Email
+                </label>
+                <Input
+                  type="email"
+                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+                />
+              </Form.Item>
+            )
+        }
         <Form.Item
           name="password"
           rules={[
@@ -74,7 +122,9 @@ const CustomForm = () => {
             htmlType="submit"
             className="login-form-button bg-[#67C6B0] w-[376px] h-[54px] text-white text-[12px] font-medium mt-[43px]"
           >
-            Log in
+         {
+            type === 'sign-up' ?'Sign Up' : 'Login'
+         }
           </Button>
         </Form.Item>
 
@@ -98,10 +148,15 @@ const CustomForm = () => {
             className="login-form-forgot text-[#67C6B0] text-[10px]"
             href="/"
           >
-            Register Now !
+            {
+                type === 'sign-up' ? 'Login' :'Register Now' 
+            }
           </Link>
           <span className="text-[#ACACAC] text-[10px]">
-            Don't have an account ?
+          {
+                type === 'sign-up' ? 'Do have an account' :" Don't have an account "
+            }
+           
           </span>
         </div>
         <div class="absolute bottom-10 left-20 w-[376px] h-px bg-gray-300"></div>
