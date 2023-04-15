@@ -42,6 +42,9 @@ const CustomForm = () => {
       value={value}
       onChange={setValue}
       flags={flags}
+      defaultCountry="PS"
+      international
+
       className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
       />
       
