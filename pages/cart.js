@@ -3,7 +3,7 @@ import Wrapper from '@/components/Wrapper'
 import { Button, Col, Input, Row } from 'antd'
 import React from 'react'
 
-const cart = () => {
+const Cart = () => {
   return (
     <Wrapper>
       <h1 className='border-b text-black text-[32px] font-normal mb-[126px] pb-[26px]'>Cart</h1>
@@ -35,4 +35,4 @@ const cart = () => {
   )
 }
 
-export default cart
+export default Cart
