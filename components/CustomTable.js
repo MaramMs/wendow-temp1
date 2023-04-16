@@ -71,7 +71,7 @@ const columns = [
 
 const CustomTable = () => {
   return (
-    <Table columns={columns} dataSource={data} />
+    <Table columns={columns} dataSource={data}  className='custom-table' pagination={false}/>
   )
 }
 
