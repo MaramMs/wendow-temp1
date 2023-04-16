@@ -22,9 +22,18 @@ const Contact = () => {
   }}
   // onFinish={onFinish}
 >
-<Row gutter={[16,16]}>
-    <Col span={11}>
-    <Form.Item
+
+
+<Row
+ gutter={{
+  lg:16,
+  xl:50,
+  xxl:8
+ }}
+>
+    <Col xs={{ span: 22 }} sm={{ span: 20 }} md={{ span: 12}} lg={{ span: 9}} xl={{span:15}} xxl={{span:11}}>
+
+<Form.Item
     name="username"
     rules={[
       {
@@ -41,9 +50,10 @@ const Contact = () => {
     <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]" />
   </Form.Item>
 
+
  
     </Col>
-    <Col span={10}>
+    <Col xs={{ span: 22 }} sm={{ span: 20 }} md={{ span: 12 }} lg={{ span: 10}} xl={{span:9}} xxl={{span:10}}>
     <Form.Item
     name="phone"
     rules={[
