@@ -5,10 +5,10 @@ import React from "react";
 const Contact = () => {
   return (
     <Wrapper>
-    <div className="flex flex-col justify-center  px-[190px]">
+    <div className="flex flex-col justify-center  px-[190px] max-[575px]:px-[15px]">
 
-    <h1 className="text-[#000] text-[24px] font-semibold">contact us</h1>
-      <p className="text-[#acacac] text-[12px] font-light w-[562px] mt-2 break-words mb-[51px]">
+    <h1 className="text-[#000] text-[24px] font-semibold max-[575px]:text-center">contact us</h1>
+      <p className="text-[#acacac] text-[12px] font-light w-[562px] mt-2 break-words mb-[51px] max-[575px]:w-[358px] max-[575px]:text-right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
         tincidunt turpis non tellus bibendum, vel euismod nibh varius. Maecenas
         rutrum orci eu est posuere, vitae semper quam molestie. Sed efficitur
@@ -16,11 +16,12 @@ const Contact = () => {
       </p>
       <Form
   name="normal_login"
-  className="login-form relative"
+  className="login-form relative max-[575px]:px-[1px] max-[575px]:w-[100%]"
   initialValues={{
     remember: true,
   }}
   // onFinish={onFinish}
+
 >
 
 
@@ -47,7 +48,7 @@ const Contact = () => {
     <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
       Full Name
     </label>
-    <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]" />
+    <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
   </Form.Item>
 
 
@@ -69,7 +70,7 @@ const Contact = () => {
       <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
         Phone Number
       </label>
-      <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]" />
+      <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
    
   </Form.Item>
     </Col>
@@ -91,7 +92,7 @@ const Contact = () => {
     <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
       Massage
     </label>
-    <Input   className="w-[781px] h-[147px] bg-[#fafafa] mt-[12px] border-[#eee]" />
+    <Input   className="w-[781px] h-[147px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
   </Form.Item>
     </Col>
 </Row>
@@ -102,7 +103,7 @@ const Contact = () => {
     <Button
       type="primary"
       htmlType="submit"
-      className="login-form-button bg-[#67C6B0] w-[376px] h-[54px] text-white text-[12px] font-medium mt-[43px]"
+      className="login-form-button bg-[#67C6B0] w-[376px] h-[54px] text-white text-[12px] font-medium mt-[43px] max-[575px]:w-[324px]"
     >
       Send
     </Button>
