@@ -12,7 +12,7 @@ const CustomForm = ({type}) => {
   const [value, setValue] = useState()
 
   return (
-    <div className="flex justify-center flex-col items-center mb-[272px]">
+    <div className="flex justify-center flex-col items-center mb-[272px] sm:px-5 xs:px-5 min-[395px]:px-[5rem]">
       <h1 className="text-[#000] text-[20px] font-semibold mb-[73px]">
         {
             type === 'login' ? 'Login ': 'Sign Up'
