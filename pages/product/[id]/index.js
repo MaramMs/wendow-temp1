@@ -14,7 +14,7 @@ const index = () => {
         <ProductDetails />
         <CustomTabs />
       <Wrapper >
-        <div className='flex justify-between border-b-[#E1E1E1] border-b-[1px] mb-[49px]'> 
+        <div className='flex justify-between border-b-[#E1E1E1] border-b-[1px] mb-[49px] max-[575px]:px-2 max-[575px]:mx-2'> 
         <span className='text-[ #323232] text-[20px] font-[600] border-b-[#67C6B0] border-b-[3px] pb-2'>
           The Same Product
         </span>
@@ -30,6 +30,7 @@ const index = () => {
                 md: 24,
                 lg: 32,
               }}
+              className='max-[575px]:px-5'
             >
               <Col className="gutter-row" lg={6} sm={6}>
                 <CardProduct />

@@ -6,18 +6,19 @@ import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 const ProductDetails = () => {
   return (
     <Wrapper>
-      <Row gutter={[28, 28]}>
+      <Row gutter={[28, 28]} className="max-[575px]:px-5">
         <Col
-          xs={{ span: 22 }}
+          xs={{ span: 24 }}
           sm={{ span: 20 }}
           md={{ span: 24 }}
           lg={{ span: 4 }}
+          className="max-[575px]:ps-0"
         >
-          <div className="flex flex-col ">
-            <div className=" w-[174px] h-[146px] mb-[19px]">
+          <div className="flex flex-col max-[575px]:flex-row max-[575px]:gap-[16px] ">
+            <div className=" w-[174px] h-[146px] mb-[19px] ">
               <img
                 src="/images/products/product1.png"
-                className="object-cover  w-[174px] h-[146px]"
+                className="object-cover  w-[174px] h-[146px] "
               />
             </div>
 
@@ -37,13 +38,13 @@ const ProductDetails = () => {
           </div>
         </Col>
         <Col
-          xs={{ span: 22 }}
+          xs={{ span: 24 }}
           sm={{ span: 20 }}
           md={{ span: 24 }}
           lg={{ span: 10}}
         >
-        <div className="w-[477px] h-[477px]">
-        <img src="/images/products/product1.png" className="w-[477px] h-[477px]" />
+        <div className="w-[477px] h-[477px] max-[575px]:w-[353px] max-[575px]:h-[353px]">
+        <img src="/images/products/product1.png" className="w-[477px] h-[477px] max-[575px]:w-[353px] max-[575px]:h-[353px]" />
         </div>
         </Col>
         <Col
