@@ -8,18 +8,20 @@ const columns = [
       key: 'name',
       render: (text, record) => (
         <div className='flex gap-2 items-center'>
-          <img src={record.image} alt={record.name} width={50} />
-          <span>{record.name}</span>
+          <img src={record.image} alt={record.name} width={50} className='max-[575px]:w-[30px] max-[575px]:object-cover'/>
+          <span className='max-[575px]:text-[13px]'>{record.name}</span>
         </div>
       ),
-      className:'text-[#323232] text-[24px] font-[400]'
+      className:'text-[#323232] text-[24px] font-[400]  max-[575px]:text-[12px]',
+   
      
     },
     {
       title: 'The Price',
       dataIndex: 'price',
       key: 'price',
-      className:'text-[#67C6B0] text-[24px] font-[600]'
+      className:'text-[#67C6B0] text-[24px] font-[600] max-[575px]:text-[12px]',
+   
      
     },
     {
@@ -40,7 +42,8 @@ const columns = [
       title: 'The total',
       key: 'total',
       dataIndex: 'total',
-      className:'text-[#67C6B0] text-[24px] font-[600]'
+      className:'text-[#67C6B0] text-[24px] font-[600] max-[575px]:text-[12px]',
+  
      
     },
    
@@ -71,7 +74,7 @@ const columns = [
 
 const CustomTable = () => {
   return (
-    <Table columns={columns} dataSource={data}  className='custom-table' pagination={false}/>
+    <Table columns={columns} dataSource={data}  className='custom-table max-[575px]:px-[14px]' pagination={false}  scroll={{ x: true }} responsive="sm" />
   )
 }
 

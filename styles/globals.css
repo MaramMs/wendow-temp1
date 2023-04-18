@@ -77,6 +77,11 @@ background: transparent;
   .list-table:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead >tr>th{
     font-size: 10px;
   }
+  .custom-table:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead >tr>th{
+  font-size: 10px;
+  
+  
+  }
 }
 
 .custom-table:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before ,.list-table:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
