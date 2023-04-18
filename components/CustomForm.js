@@ -12,7 +12,7 @@ const CustomForm = ({type}) => {
   const [value, setValue] = useState()
 
   return (
-    <div className="flex justify-center flex-col items-center mb-[272px] sm:px-5 xs:px-5 min-[395px]:px-[5rem]">
+    <div className="flex justify-center flex-col items-center mb-[272px] sm:px-5 xs:px-5 max-[575px]:px-5">
       <h1 className="text-[#000] text-[20px] font-semibold mb-[73px]">
         {
             type === 'login' ? 'Login ': 'Sign Up'
@@ -20,7 +20,7 @@ const CustomForm = ({type}) => {
       </h1>
       <Form
         name="normal_login"
-        className="login-form  relative"
+        className="login-form  relative max-[575px]:px-[1px] max-[575px]:w-[100%]"
         initialValues={{
           remember: true,
         }}
@@ -38,13 +38,14 @@ const CustomForm = ({type}) => {
                 ]}
                 labelCol={{ span: 8 }}
                 wrapperCol={{ span: 16 }}
+            
               >
                 <label className="text-[#ACACAC] text-[10px] font-normal ">
                   User Name
                 </label>
                 <Input
                   type="text"
-                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]"
                 />
               </Form.Item>
             )
@@ -70,7 +71,7 @@ const CustomForm = ({type}) => {
       defaultCountry="PS"
       international
 
-      className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+      className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]  max-[575px]:w-[324px]"
       />
       
         </Form.Item>
@@ -92,7 +93,7 @@ const CustomForm = ({type}) => {
                 </label>
                 <Input
                   type="email"
-                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+                  className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]  max-[575px]:w-[324px]"
                 />
               </Form.Item>
             )
@@ -113,14 +114,14 @@ const CustomForm = ({type}) => {
           </label>
           <Input
             type="password"
-            className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]"
+            className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee]  max-[575px]:w-[324px]"
           />
         </Form.Item>
         <Form.Item>
           <Button
             type="primary"
             htmlType="submit"
-            className="login-form-button bg-[#67C6B0] w-[376px] h-[54px] text-white text-[12px] font-medium mt-[43px]"
+            className="login-form-button bg-[#67C6B0] w-[376px] h-[54px] text-white text-[12px] font-medium mt-[43px]  max-[575px]:w-[324px]"
           >
          {
             type === 'sign-up' ?'Sign Up' : 'Login'
@@ -128,7 +129,7 @@ const CustomForm = ({type}) => {
           </Button>
         </Form.Item>
 
-        <div className="flex justify-between w-[376px]">
+        <div className="flex justify-between w-[376px]  max-[575px]:w-[324px]">
           <Form.Item>
             <Form.Item
               name="remember"
@@ -159,7 +160,7 @@ const CustomForm = ({type}) => {
            
           </span>
         </div>
-        <div class="absolute bottom-10 left-20 w-[376px] h-px bg-gray-300"></div>
+        <div class="absolute bottom-10 left-20 w-[376px] h-px bg-gray-300  max-[575px]:left-0  max-[575px]:w-[324px]"></div>
       </Form>
     </div>
   );
