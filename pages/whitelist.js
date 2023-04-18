@@ -62,11 +62,11 @@ const whitelist = () => {
           bordered={false}
           columns={columns}
           dataSource={data}
-          style={{
-            borderTop: "1px solid #EDEDED",
-            borderBottom: "1px solid #EDEDED",
-          }}
-          className="list-table mb-[500px] max-[575px]:px-5 "
+          // style={{
+          //   borderTop: "1px solid #EDEDED",
+          //   borderBottom: "1px solid #EDEDED",
+          // }}
+          className="list-table mb-[500px] max-[575px]:px-5 max-[575px]:border-t-0 max-[575px]:border-b-0 "
           pagination={false}
         />
       </Wrapper>
