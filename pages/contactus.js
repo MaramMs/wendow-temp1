@@ -26,13 +26,9 @@ const Contact = () => {
 
 
 <Row
- gutter={{
-  lg:16,
-  xl:50,
-  xxl:8
- }}
+gutter={[16,16]}
 >
-    <Col xs={{ span: 22 }} sm={{ span: 20 }} md={{ span: 12}} lg={{ span: 9}} xl={{span:15}} xxl={{span:11}}>
+    <Col span={12}>
 
 <Form.Item
     name="username"
@@ -42,19 +38,19 @@ const Contact = () => {
         message: "Please input your Username!",
       },
     ]}
-    labelCol={{ span: 8 }}
-    wrapperCol={{ span: 16 }}
+    // labelCol={{ span:  24}}
+    // wrapperCol={{ span: 24}}
   >
-    <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
+    <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
       Full Name
     </label>
-    <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+    <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
   </Form.Item>
 
 
  
     </Col>
-    <Col xs={{ span: 22 }} sm={{ span: 20 }} md={{ span: 12 }} lg={{ span: 10}} xl={{span:9}} xxl={{span:10}}>
+    <Col span={12}>
     <Form.Item
     name="phone"
     rules={[
@@ -63,14 +59,14 @@ const Contact = () => {
         message: "Please input your phone number!",
       },
     ]}
-    labelCol={{ span: 8 }}
-    wrapperCol={{ span: 16 }}
+    // labelCol={{ span: 24 }}
+    // wrapperCol={{ span: 24 }}
   >
    
-      <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
+      <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
         Phone Number
       </label>
-      <Input className="w-[376px] h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+      <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
    
   </Form.Item>
     </Col>
@@ -86,13 +82,13 @@ const Contact = () => {
         message: "Please input Intro",
       },
     ]}
-    labelCol={{ span: 8 }}
-    wrapperCol={{ span: 16 }}
+    // labelCol={{ span: 8 }}
+    // wrapperCol={{ span: 16 }}
   >
-    <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px]">
+    <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
       Massage
     </label>
-    <Input   className="w-[781px] h-[147px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+    <Input   className=" h-[147px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
   </Form.Item>
     </Col>
 </Row>
