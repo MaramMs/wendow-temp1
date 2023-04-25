@@ -91,3 +91,9 @@ background: transparent;
 .list-table:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead >tr>td{
   border: none;
 }
+
+:where(.css-dev-only-do-not-override-1vtf12y).ant-slider .ant-slider-handle::after,:where(.css-dev-only-do-not-override-1vtf12y).ant-slider .ant-slider-handle::after {
+  border: 1px solid #67C6B0;
+  background-color: #67C6B0;
+  box-shadow: none !important;
+}
