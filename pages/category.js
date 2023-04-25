@@ -18,15 +18,21 @@ const category = () => {
     <Wrapper>
      <Row  gutter={{
             lg:24,
-            xxl:0
+            xxl:0,
+            md:8,
+            sm:8
            }}>
         <Col lg={{span:20}} xxl={{span:20}}>
            <img src='/images/black-lap.png' className='mb-[32px]'/>
 
            <Row  gutter={{
             lg:24,
-            xxl:0
-           }}>
+            xxl:0,
+            sm:8,
+            xs:16
+           }} 
+           className='px-[15px]'
+           >
             <Col className="gutter-row" lg={{span:8}} xxl={{span:7}}>
             <CardProduct />
             </Col>
@@ -62,7 +68,7 @@ const category = () => {
            <CustomPagination />
         </Col>
 
-        <Col lg={{span:4}} xxl={{span:4}}>
+        <Col lg={{span:4}} xxl={{span:4}} className='max-sm:hidden'>
          <CustomeRang />
         </Col>
      </Row>
