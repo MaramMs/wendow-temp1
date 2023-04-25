@@ -11,7 +11,7 @@ const category = () => {
 <div
 
   >
-  <img src='/images/cat-lap.png'width='100%' className='py-20' height='100%'/>
+  <img src='/images/cat-lap.png'width='100%' className='py-20 max-sm:py-0' height='100%'/>
   </div>
 
 
@@ -23,7 +23,7 @@ const category = () => {
             sm:8
            }}>
         <Col lg={{span:20}} xxl={{span:20}}>
-           <img src='/images/black-lap.png' className='mb-[32px]'/>
+           <img src='/images/black-lap.png' className='mb-[32px] max-sm:px-[17px]'/>
 
            <Row  gutter={{
             lg:24,
