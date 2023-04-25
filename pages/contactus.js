@@ -28,8 +28,7 @@ const Contact = () => {
 <Row
 gutter={[16,16]}
 >
-    <Col span={12}>
-
+    <Col md={{span:12}} xs={24}>
 <Form.Item
     name="username"
     rules={[
@@ -50,7 +49,7 @@ gutter={[16,16]}
 
  
     </Col>
-    <Col span={12}>
+    <Col md ={{span:12}} xs={24}>
     <Form.Item
     name="phone"
     rules={[
