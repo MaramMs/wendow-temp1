@@ -2,7 +2,7 @@ import CustomTable from '@/components/CustomTable'
 import Wrapper from '@/components/Wrapper'
 import { Button, Col, Input, Row } from 'antd'
 import React, { useState } from 'react'
-import useWindowSize from './hooks/useWindowSize'
+import useWindowSize from '../hooks/useWindowSize'
 import MobileCart from '@/components/MobileCart'
 const Cart = () => {
   const { width } = useWindowSize();
