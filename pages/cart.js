@@ -1,15 +1,23 @@
 import CustomTable from '@/components/CustomTable'
 import Wrapper from '@/components/Wrapper'
 import { Button, Col, Input, Row } from 'antd'
-import React from 'react'
-
+import React, { useState } from 'react'
+import useWindowSize from './hooks/useWindowSize'
+import MobileCart from '@/components/MobileCart'
 const Cart = () => {
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
   return (
     <Wrapper>
       <h1 className='border-b text-black text-[32px] font-normal mb-[126px] pb-[26px] max-[575px]:px-[20px] max-[575px]:w-[362px] max-[575px]:mr-[10px] max-[575px]:mb-[30px]'>Cart</h1>
       <Row gutter={[16,16]} className='h-[500px] max-[575px]:px-[16px] max-[575px]:h-[800px]'>
         <Col lg={{span:17}} sm={{span:20}}>
-          <CustomTable />
+          {
+            isMobile ? <MobileCart />: (
+
+              <CustomTable />
+            )
+          }
         </Col>
         <Col lg={{span:6}} sm={{span:20}} className='max-[575px]:px-0!important'>
           <div className='border border-[#D9D9D9] px-[32px] py-[36px] mb-[22px] rounded-[8px] w-[376px] h-[278px] max-[575px]:w-[362px]'>
