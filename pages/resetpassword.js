@@ -78,7 +78,7 @@ const resetpassword = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="login-form-button bg-[#67C6B0] flex justify-center items-center m-auto w-[358px] h-[38px]"
+              className="login-form-button bg-[#67C6B0] flex justify-center items-center m-auto w-full h-[38px]"
             >
               Save
             </Button>
