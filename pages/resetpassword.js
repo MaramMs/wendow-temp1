@@ -37,7 +37,7 @@ const resetpassword = () => {
           >
             <Input.Password
               placeholder="a current password"
-              className=" w-[359px] h-[54px]  bg-black border border-[#eee]"
+              className="  h-[54px]  bg-black border border-[#eee]"
               style={{ backgroundColor: "#FAFAFA" }}
             />
           </Form.Item>
@@ -53,7 +53,7 @@ const resetpassword = () => {
           >
             <Input.Password
               placeholder="a new password"
-              className=" w-[359px] h-[54px] bg-[#FAFAFA]  border border-[#eee]"
+              className="  h-[54px] bg-[#FAFAFA]  border border-[#eee]"
               style={{ backgroundColor: "#FAFAFA" }}
             />
           </Form.Item>
@@ -69,7 +69,7 @@ const resetpassword = () => {
           >
             <Input.Password
               placeholder="confirm a new password"
-              className=" w-[359px] h-[54px] bg-[#FAFAFA]  border border-[#eee]"
+              className="  h-[54px] bg-[#FAFAFA]  border border-[#eee]"
               style={{ backgroundColor: "#FAFAFA" }}
             />
           </Form.Item>
