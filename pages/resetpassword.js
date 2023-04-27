@@ -33,6 +33,7 @@ const resetpassword = () => {
                 message: "Please input your password!",
               },
             ]}
+            className="md:w-[380px]"
            
           >
             <Input.Password
@@ -50,6 +51,8 @@ const resetpassword = () => {
                 message: "Please input your password!",
               },
             ]}
+            className="md:w-[380px]"
+
           >
             <Input.Password
               placeholder="a new password"
@@ -66,6 +69,8 @@ const resetpassword = () => {
                 message: "Please input your password!",
               },
             ]}
+            className="md:w-[380px]"
+
           >
             <Input.Password
               placeholder="confirm a new password"
