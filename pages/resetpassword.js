@@ -1,6 +1,5 @@
 import Wrapper from "@/components/Wrapper";
-import { Button, Checkbox, Form, Input } from "antd";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { Button, Form, Input } from "antd";
 
 const resetpassword = () => {
   const onFinish = (values) => {
