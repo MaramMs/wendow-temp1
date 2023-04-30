@@ -1,4 +1,5 @@
 import MobileProfile from "@/components/MobileProfile";
+import WebContactProfile from "@/components/WebContactProfile";
 import WebMyProfile from "@/components/WebMyProfile";
 import Wrapper from "@/components/Wrapper";
 import useWindowSize from "@/hooks/useWindowSize";
@@ -20,7 +21,7 @@ const myprofile = () => {
     {
       key: "2",
       label: `Contact`,
-      // children: `Content of Tab Pane 2`,
+      children: <WebContactProfile /> ,
     },
     {
       key: "3",
