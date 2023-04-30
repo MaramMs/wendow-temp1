@@ -1,6 +1,7 @@
 import MobileProfile from "@/components/MobileProfile";
 import WebContactProfile from "@/components/WebContactProfile";
 import WebMyProfile from "@/components/WebMyProfile";
+import WebOrderProfile from "@/components/WebOrderProfile";
 import Wrapper from "@/components/Wrapper";
 import useWindowSize from "@/hooks/useWindowSize";
 import { Tabs } from "antd";
@@ -26,7 +27,7 @@ const myprofile = () => {
     {
       key: "3",
       label: `My Order`,
-      // children: `Content of Tab Pane 3`,
+      children: <WebOrderProfile />,
     },
     {
       key: "4",
