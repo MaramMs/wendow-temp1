@@ -4,19 +4,24 @@ import React from "react";
 
 const WebMyProfile = () => {
   return (
-    <Row className="items-center">
-      <Col md={{ span: 4 }}>
-        <div className="w-[144px] h-[144px]  mb-[111px] relative max-w-[100%]">
+    <Row >
+      <Col md={{ span: 4 }} className="pt-[75px]">
+        <div className="w-[144px] h-[144px]   relative max-w-[100%]">
           <img
             src="/images/person/profile.png"
-            className="rounded-full w-[144px] h-[144px] object-cover"
+            className="rounded-full w-[144px] h-[144px] object-cover max-w-[100%]"
           />
-          <span className="w-[22px] h-[22px] bg-[#67C6B0] flex justify-center items-center rounded-full absolute right-[12px] bottom-0 p-4 cursor-pointer">
-            <EditOutlined className="text-white " />
-          </span>
+             <div className="flex justify-center items-center gap-[5px] mt-[14px]  ">
+            <span className="w-[29px] h-[29px]  border-[#D9D9D9] border rounded-[4px]  flex justify-center items-center  p-4 cursor-pointer">
+              <EditOutlined className="text-[#ACACAC] text-[16px]" />
+            </span>
 
-          <span>{/* <DeleteOutlined/> */}</span>
+            <span className="w-[29px] h-[29px]  border-[#D9D9D9] border rounded-[4px] flex justify-center items-center   p-4 cursor-pointer">
+              <DeleteOutlined  className="text-[#ACACAC]"/>
+            </span>
+          </div>
         </div>
+  
       </Col>
 
       <Col md={{ span: 20 }}>
@@ -73,14 +78,14 @@ const WebMyProfile = () => {
             </Row>
 
             <Form.Item className="flex justify-end items-center">
-    <Button
-      type="primary"
-      htmlType="submit"
-      className="login-form-button bg-[#67C6B0] w-[108px] h-[48px] text-white text-[12px] font-medium mt-[43px]"
-    >
-      Save
-    </Button>
-  </Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button bg-[#67C6B0] w-[108px] h-[48px] text-white text-[12px] font-medium mt-[43px]"
+              >
+                Save
+              </Button>
+            </Form.Item>
           </Form>
         </div>
       </Col>
