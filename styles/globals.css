@@ -107,3 +107,7 @@ background: transparent;
 :where(.css-dev-only-do-not-override-1vtf12y).ant-input-affix-wrapper >input.ant-input{
   background-color: transparent;
 }
+
+:where(.css-dev-only-do-not-override-1vtf12y).ant-tabs-top >.ant-tabs-nav::before{
+  border-bottom: 0px;
+}
