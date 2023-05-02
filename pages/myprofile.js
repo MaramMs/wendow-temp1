@@ -28,7 +28,7 @@ const myprofile = () => {
     {
       key: "3",
       label: `My Order`,
-      children: <WebOrderProfile />,
+      children: <WebOrderProfile /> ,
     },
     {
       key: "4",

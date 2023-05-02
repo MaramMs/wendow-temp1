@@ -57,8 +57,6 @@ const changepassword = () => {
 
       <div className='mt-[117px] mb-[85px]'>
         <span className='text-[#000] text-[12px] font-medium'>Back</span>
-        
-
         <Link href='/' className='text-[#67C6B0] text-[12px] font-medium underline'>
             Login in
         </Link>
