@@ -5,9 +5,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 const MobileProfile = () => {
-  const {query} = useRouter(); 
-  const tab = query.tab || 'profile'
-  
+  const  router = useRouter(); 
   return (
  <>
     <div className='flex justify-center items-center w-[119px] h-[119px]  m-auto mb-[111px] relative'>
@@ -19,7 +17,7 @@ const MobileProfile = () => {
     <Row className='px-5 bg-white mb-[72px]'>
      
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
-         <div className='flex gap-[23px] items-center ' >
+         <div className='flex gap-[23px] items-center ' onClick={() => router.push('/profile/personal')} >
          <UserOutlined className='text-[#67C6B0] text-[17.52px]'/>
  <span className='text-[#67C6B0] text-[14px] font-normal'>My Profile</span>
          </div>
@@ -38,7 +36,7 @@ const MobileProfile = () => {
 
 
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
-         <div className='flex gap-[23px] items-center'>
+         <div className='flex gap-[23px] items-center' onClick={() => router.push('/profile/contact')}>
          <UserOutlined className='text-[#67C6B0] text-[17.52px]'/>
  <span className='text-[#67C6B0] text-[14px] font-normal'>Contact</span>
          </div>
@@ -47,7 +45,7 @@ const MobileProfile = () => {
 
 
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
-         <div className='flex gap-[23px] items-center'>
+         <div className='flex gap-[23px] items-center' onClick={() => router.push('/profile/settings')}>
          <LockFilled  className='text-[#67C6B0] text-[17.52px]'/>
  <span className='text-[#67C6B0] text-[14px] font-normal'>Password</span>
          </div>
