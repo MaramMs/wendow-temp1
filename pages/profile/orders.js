@@ -6,7 +6,6 @@ const orders = () => {
   return (
     <div>
     <MobileOrderProfile />
- 
     </div>
   )
 }
