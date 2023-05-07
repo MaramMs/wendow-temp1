@@ -1,11 +1,15 @@
+import WebContactProfile from '@/components/WebContactProfile'
 import React from 'react'
 
 const contact = () => {
   return (
     <div>
-      contact
+      <WebContactProfile />
     </div>
   )
 }
 
 export default contact
+
+
+

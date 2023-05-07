@@ -3,14 +3,14 @@ import React from "react";
 
 const WebContactProfile = () => {
   return (
-    <>
+    <div className="px-[15px]">
       <h3 className="text-[#000] text-[16px] font-medium relative w-[471px] pb-[7px] mt-[75px]">
         Personal Data
         <span className="after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-[#EAF0EF]" />
       </h3>
 
       <Row>
-        <Col span={12}>
+        <Col  span ={24} md={{span:12}}>
           <Form
             name="normal_login"
             className="login-form relative max-[575px]:px-[1px] max-[575px]:w-[100%] mt-[40px]"
@@ -20,7 +20,7 @@ const WebContactProfile = () => {
             // onFinish={onFinish}
           >
             <Row gutter={[16, 16]}>
-              <Col md={{ span: 12 }} xs={24}>
+              <Col span ={24}md={{ span: 12 }} >
                 <Form.Item
                   name="username"
                   rules={[
@@ -35,10 +35,10 @@ const WebContactProfile = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     E-mail
                   </label>
-                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] " />
                 </Form.Item>
               </Col>
-              <Col md={{ span: 12 }} xs={24}>
+              <Col span={24} md={{ span: 12 }} >
                 <Form.Item
                   name="phone"
                   rules={[
@@ -53,11 +53,11 @@ const WebContactProfile = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Phone
                   </label>
-                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] " />
                 </Form.Item>
               </Col>
 
-              <Col md={{ span: 12 }} xs={24}>
+              <Col span={24} md={{ span: 12 }}>
                 <Form.Item
                   name="username"
                   rules={[
@@ -72,10 +72,10 @@ const WebContactProfile = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Country
                   </label>
-                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] " />
                 </Form.Item>
               </Col>
-              <Col md={{ span: 12 }} xs={24}>
+              <Col span={24} md={{ span: 12 }}>
                 <Form.Item
                   name="phone"
                   rules={[
@@ -90,11 +90,11 @@ const WebContactProfile = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     City
                   </label>
-                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] " />
                 </Form.Item>
               </Col>
 
-              <Col md={{ span: 12 }} xs={24}>
+              <Col span={24} md={{ span: 12 }}>
                 <Form.Item
                   name="username"
                   rules={[
@@ -109,7 +109,7 @@ const WebContactProfile = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Post
                   </label>
-                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[60px] bg-[#fafafa] mt-[12px] border-[#eee] " />
                 </Form.Item>
               </Col>
             </Row>
@@ -118,7 +118,7 @@ const WebContactProfile = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                className="login-form-button bg-[#67C6B0] w-[108px] h-[48px] text-white text-[12px] font-medium mt-[43px]"
+                className="login-form-button bg-[#67C6B0] md:w-[108px] md:h-[48px] text-white text-[12px] font-medium mt-[43px] w-full"
               >
                 Save
               </Button>
@@ -126,7 +126,7 @@ const WebContactProfile = () => {
           </Form>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 
