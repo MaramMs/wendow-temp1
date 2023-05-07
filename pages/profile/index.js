@@ -73,7 +73,7 @@ setActiveTab(activeTabKey)
                 borderBottom: "0px",
               }}
             />
-            {items.find((tab)=>tab.key === activeTab)?.children}
+            {/* {items.find((tab)=>tab.key === activeTab)?.children} */}
 
           </Wrapper>
         </>
