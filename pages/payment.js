@@ -1,6 +1,7 @@
+import BankTransfer from "@/components/BankTransfer";
 import Wrapper from "@/components/Wrapper";
 import { Button, Checkbox, Col, Form, Input, Row, Table } from "antd";
-import React from "react";
+import React, { useState } from "react";
 
 const payment = () => {
   const dataSource = [
@@ -35,6 +36,7 @@ const payment = () => {
       key: "address",
     },
   ];
+  const [transfer ,setTransfer] = useState(false)
   return (
     <Wrapper>
       <Row span={24} gutter={[40, 40]}>
@@ -175,26 +177,7 @@ const payment = () => {
                 </Form.Item>
               </Col>
             </Row>
-            <Form.Item
-      name="agree"
-      valuePropName="checked"
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    //   className="md:mt-[191px] md:mb-[137px]"
-    >
-      <Checkbox>I agree to the payment and warranty policy</Checkbox>
-    </Form.Item>
-            <Form.Item className="flex justify-end items-center">
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button bg-[#67C6B0] md:w-[478px] md:h-[48px] text-white text-[12px] font-medium mt-[43px] w-full"
-              >
-                Save
-              </Button>
-            </Form.Item>
+    
           </Form>
         </Col>
 
@@ -248,16 +231,55 @@ const payment = () => {
                     <img src="/images/visa.png" />
                   </div>
                 </Col>
+
                 <Col span={24}>
-                  <div className="bg-[#F8F8F8] rounded-[8px] border border-[#e8e8e8] flex justify-center items-center h-[85px]">
+                  <div className="bg-[#F8F8F8] rounded-[8px] border cursor-pointer border-[#e8e8e8] flex justify-center items-center h-[85px]" onClick={() => setTransfer(!transfer)}>
                     <p className="text-[16px] font-medium text-[#67C6B0]">
                       Transfer
                     </p>
                   </div>
                 </Col>
+                {
+                  transfer && <Col span={24}>
+                  <BankTransfer />
+                  </Col>
+                }
               </Row>
+
+ 
             </Col>
+
+            <Col  span={24}>
+              <p className="text-[10px] text-[#000] mt-[21px] mb-[14px]">Attach a copy of the money transfer</p>
+              <div className="bg-[#F1F1F1] h-[84px] rounded-[8px] border border-[#67c6b0] flex justify-center items-center">
+                <Button className="bg-[#67C6B0] rounded-[8px] text-center w-[116px] text-[#fff] p-2 text-[10px]">
+                  upload file
+                </Button>
+              </div>
+            </Col>
+  <Col span={24}>      
+            <Form.Item
+      name="agree"
+      valuePropName="checked"
+    
+      className="mt-[35px]"
+ 
+    >
+      <Checkbox>I agree to the payment and warranty policy</Checkbox>
+    </Form.Item>
+          <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button bg-[#67C6B0] w-full md:h-[48px] text-white text-[12px] font-medium  "
+              >
+                Save
+              </Button>
+            </Form.Item>
+          </Col>
           </Row>
+
+ 
         </Col>
       </Row>
     </Wrapper>
