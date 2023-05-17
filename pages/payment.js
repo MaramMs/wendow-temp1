@@ -36,12 +36,12 @@ const payment = () => {
       key: "address",
     },
   ];
-  const [transfer ,setTransfer] = useState(false)
+  const [transfer, setTransfer] = useState(false);
   return (
     <Wrapper>
       <Row span={24} gutter={[40, 40]}>
         <Col span={24} md={{ span: 12 }}>
-        <h1 className="text-[#000] font-semibold text-[24px]">Contact</h1>
+          <h1 className="text-[#000] font-semibold text-[24px]">Contact</h1>
           <Form
             name="normal_login"
             className="login-form relative max-[575px]:px-[1px] max-[575px]:w-[100%] mt-[40px]"
@@ -76,7 +76,6 @@ const payment = () => {
                       message: "Please input your phone number!",
                     },
                   ]}
-                
                 >
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Last Name
@@ -173,11 +172,10 @@ const payment = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Notes
                   </label>
-                  <Input   className=" h-[104px] bg-[#fafafa]  border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[104px] bg-[#fafafa]  border-[#eee] max-[575px]:w-[324px]" />
                 </Form.Item>
               </Col>
             </Row>
-    
           </Form>
         </Col>
 
@@ -233,53 +231,52 @@ const payment = () => {
                 </Col>
 
                 <Col span={24}>
-                  <div className="bg-[#F8F8F8] rounded-[8px] border cursor-pointer border-[#e8e8e8] flex justify-center items-center h-[85px]" onClick={() => setTransfer(!transfer)}>
+                  <div
+                    className="bg-[#F8F8F8] rounded-[8px] border cursor-pointer border-[#e8e8e8] flex justify-center items-center h-[85px]"
+                    onClick={() => setTransfer(!transfer)}
+                  >
                     <p className="text-[16px] font-medium text-[#67C6B0]">
                       Transfer
                     </p>
                   </div>
                 </Col>
-                {
-                  transfer && <Col span={24}>
-                  <BankTransfer />
+                {transfer && (
+                  <Col span={24}>
+                    <BankTransfer />
                   </Col>
-                }
+                )}
               </Row>
-
- 
             </Col>
 
-            <Col  span={24}>
-              <p className="text-[10px] text-[#000] mt-[21px] mb-[14px]">Attach a copy of the money transfer</p>
+            <Col span={24}>
+              <p className="text-[10px] text-[#000] mt-[21px] mb-[14px]">
+                Attach a copy of the money transfer
+              </p>
               <div className="bg-[#F1F1F1] h-[84px] rounded-[8px] border border-[#67c6b0] flex justify-center items-center">
                 <Button className="bg-[#67C6B0] rounded-[8px] text-center w-[116px] text-[#fff] p-2 text-[10px]">
                   upload file
                 </Button>
               </div>
             </Col>
-  <Col span={24}>      
-            <Form.Item
-      name="agree"
-      valuePropName="checked"
-    
-      className="mt-[35px]"
- 
-    >
-      <Checkbox>I agree to the payment and warranty policy</Checkbox>
-    </Form.Item>
-          <Form.Item>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button bg-[#67C6B0] w-full md:h-[48px] text-white text-[12px] font-medium  "
+            <Col span={24}>
+              <Form.Item
+                name="agree"
+                valuePropName="checked"
+                className="mt-[35px]"
               >
-                Save
-              </Button>
-            </Form.Item>
-          </Col>
+                <Checkbox>I agree to the payment and warranty policy</Checkbox>
+              </Form.Item>
+              <Form.Item>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="login-form-button bg-[#67C6B0] w-full md:h-[48px] text-white text-[12px] font-medium  "
+                >
+                  Save
+                </Button>
+              </Form.Item>
+            </Col>
           </Row>
-
- 
         </Col>
       </Row>
     </Wrapper>
