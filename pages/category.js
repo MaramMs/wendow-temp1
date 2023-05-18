@@ -38,6 +38,11 @@ const category = () => {
             sm: 8,
           }}
         >
+            <Row className="md:mb-[264px]">
+              <Col span={24} md={24}>
+                <img src="/images/black-lap.png" />
+              </Col>
+            </Row>
           <Col span={24} md={{ span: 18 }}>
             {isMobile && (
               <div className="flex justify-center items-center  mt-[33px] mb-[26px] bg-[#FBF8FF] rounded-[8px] mr-auto w-[59px] h-[58px]">
@@ -50,11 +55,7 @@ const category = () => {
 
             {modal && <FilterModal setShowModal={setShowModal} modal={modal} />}
 
-            <Row className="md:mb-[264px]">
-              <Col span={12} md={24}>
-                <img src="/images/black-lap.png" />
-              </Col>
-            </Row>
+          
 
             <Row
               gutter={{
