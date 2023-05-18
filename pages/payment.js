@@ -172,7 +172,7 @@ const payment = () => {
                   <label className="text-[#ACACAC] text-[10px] font-normal mb-[12px] block">
                     Notes
                   </label>
-                  <Input className=" h-[104px] bg-[#fafafa]  border-[#eee] max-[575px]:w-[324px]" />
+                  <Input className=" h-[104px] bg-[#fafafa]  border-[#eee] " />
                 </Form.Item>
               </Col>
             </Row>
@@ -188,13 +188,13 @@ const payment = () => {
                 pagination={false}
               />
 
-              <div className="flex justify-between items-center md:mb-[35px]">
+              <div className="flex justify-between items-center mb-[35px]">
                 <span className="text-[16px] text-[#acacac] font-medium">
                   Fax
                 </span>
                 <span className="text-[16px] text-[#000] font-medium">0$</span>
               </div>
-              <div className="flex justify-between item md:mb-[35px]">
+              <div className="flex justify-between item mb-[35px]">
                 <span className="text-[16px] text-[#acacac] font-medium">
                   Total{" "}
                 </span>
@@ -204,27 +204,27 @@ const payment = () => {
               </div>
             </Col>
 
-            <Col>
-              <h2 className="text-[#000] text-[16px] font-medium md:mb-[30px]">
+            <Col className="mt-[58px] md:mt-0">
+              <h2 className="text-[#000] text-[16px] font-medium mb-[30px]">
                 Choose payment
               </h2>
               <Row gutter={[21, 33]}>
-                <Col md={{ span: 12 }}>
+                <Col span={12}>
                   <div className="bg-[#F8F8F8] rounded-[8px] border border-[#e8e8e8] flex justify-center items-center h-[85px]">
-                    <img src="/images/visa.png" />
+                    <img src="/images/jawwal-pay.png" />
                   </div>
                 </Col>
-                <Col md={{ span: 12 }}>
+                <Col  span={12}>
                   <div className="bg-[#F8F8F8] rounded-[8px] border border-[#e8e8e8] flex justify-center items-center h-[85px]">
-                    <img src="/images/visa.png" />
+                    <img src="/images/bank-palestine.png" />
                   </div>
                 </Col>
-                <Col md={{ span: 12 }}>
+                <Col span={12}>
                   <div className="bg-[#F8F8F8] rounded-[8px] border border-[#e8e8e8] flex justify-center items-center h-[85px]">
-                    <img src="/images/visa.png" />
+                    <img src="/images/bank-palestine.png" />
                   </div>
                 </Col>
-                <Col md={{ span: 12 }}>
+                <Col span={12}>
                   <div className="bg-[#F8F8F8] rounded-[8px] border border-[#e8e8e8] flex justify-center items-center h-[85px]">
                     <img src="/images/visa.png" />
                   </div>
