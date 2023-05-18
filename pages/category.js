@@ -38,13 +38,14 @@ const category = () => {
             sm: 8,
           }}
         >
-            <Row className="md:mb-[264px]">
-              <Col span={24} md={24}>
+          
+           
+            
+          <Col span={24} md={{ span: 18 }}>
+          <Col span={24} md={24} className="md:mb-[264px]">
                 <img src="/images/black-lap.png" />
               </Col>
-            </Row>
-          <Col span={24} md={{ span: 18 }}>
-            {isMobile && (
+          {isMobile && (
               <div className="flex justify-center items-center  mt-[33px] mb-[26px] bg-[#FBF8FF] rounded-[8px] mr-auto w-[59px] h-[58px]">
                 <FiFilter
                   className="text-[18px] text-[#7251A2] cursor-pointer"
