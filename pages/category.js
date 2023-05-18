@@ -1,15 +1,24 @@
 import CardProduct from "@/components/CardProduct";
 import CustomPagination from "@/components/CustomPagination";
 import CustomeRang from "@/components/CustomeRang";
+import FilterModal from "@/components/FilterModal";
 import Wrapper from "@/components/Wrapper";
 import useWindowSize from "@/hooks/useWindowSize";
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { FiFilter } from "react-icons/fi";
 
 const category = () => {
   const { width } = useWindowSize();
   const isMobile = width <= 768;
+  const [modal ,setShowModal] = useState(false)
+
+  const showModal = () =>{
+    setShowModal(true);
+   
+  }
+
+  console.log(modal);
   return (
     <>
       <div>
@@ -37,10 +46,19 @@ const category = () => {
             />
             {isMobile && (
               <div className="flex justify-center items-center  mt-[33px] mb-[26px] bg-[#FBF8FF] rounded-[8px] mr-auto w-[59px] h-[58px]">
-                <FiFilter className="text-[18px] text-[#7251A2] cursor-pointer" />
+                <FiFilter className="text-[18px] text-[#7251A2] cursor-pointer" onClick={showModal}/>
               </div>
-            )}
 
+            )
+            
+           
+            }
+
+            {
+              modal && <FilterModal setShowModal={setShowModal} modal={modal}/>
+            }
+
+  
             <Row
               gutter={{
                 lg: 24,
