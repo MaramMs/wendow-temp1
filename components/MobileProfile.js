@@ -2,6 +2,7 @@ import { DownOutlined, EditOutlined, LockFilled, LockOutlined, UserOutlined } fr
 import { Col, Row } from 'antd'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import {MdPermContactCalendar} from 'react-icons/md'
 import React from 'react'
 
 const MobileProfile = () => {
@@ -27,7 +28,7 @@ const MobileProfile = () => {
 
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
          <div className='flex gap-[23px] items-center'>
-         <UserOutlined className='text-[#67C6B0] text-[17.52px]'/>
+         <img src='/images/order.svg '/>
  <span className='text-[#67C6B0] text-[14px] font-normal' onClick={() => router.push('/profile/orders')}>My Orders</span>
          </div>
          <DownOutlined  className='text-[#67C6B0]'/>
@@ -37,7 +38,7 @@ const MobileProfile = () => {
 
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
          <div className='flex gap-[23px] items-center' onClick={() => router.push('/profile/contact')}>
-         <UserOutlined className='text-[#67C6B0] text-[17.52px]'/>
+         <MdPermContactCalendar className='text-[#67C6B0] text-[17.52px]'/>
  <span className='text-[#67C6B0] text-[14px] font-normal'>Contact</span>
          </div>
          <DownOutlined  className='text-[#67C6B0]'/>
@@ -46,7 +47,7 @@ const MobileProfile = () => {
 
        <Col span={24} className='flex justify-between h-[53px] px-[16px] items-center rounded-[4px] bg-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.15)] mb-[15px]'>
          <div className='flex gap-[23px] items-center' onClick={() => router.push('/profile/settings')}>
-         <LockFilled  className='text-[#67C6B0] text-[17.52px]'/>
+         <LockOutlined  className='text-[#67C6B0] text-[17.52px]'/>
  <span className='text-[#67C6B0] text-[14px] font-normal'>Password</span>
          </div>
          <DownOutlined  className='text-[#67C6B0]'/>
