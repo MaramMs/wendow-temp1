@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "./Wrapper";
 import React, { useState } from "react";
-import { Button, Dropdown, Space,Input } from "antd";
+import { useTranslation } from "react-i18next";
+import { Button, Dropdown, Space, Input } from "antd";
 import {
   BarsOutlined,
   DownOutlined,
@@ -12,7 +13,6 @@ import {
   CloseCircleOutlined,
   GlobalOutlined,
 } from "@ant-design/icons";
-import Language from "./Language";
 
 function Navbar() {
   const items = [
@@ -33,6 +33,7 @@ function Navbar() {
   const handleClick = () => {
     return setToggle(!toggle);
   };
+  const { t } = useTranslation();
   return (
     <>
       <Wrapper>
@@ -111,20 +112,19 @@ function Navbar() {
               </div>
             </div>
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-[#7251A2] font-normal	text-sm	">
-                {" "}
-                تسجيل
+              <Link href="/signup" className="text-[#7251A2] font-normal	text-sm	">
+                {t("Register")}
               </Link>
               <span className="text-black font-bold	">او</span>
-              <Link href="/" className="text-[#7251A2] font-normal	text-sm	">
-                تسجيل دخول
+              <Link href="/login" className="text-[#7251A2] font-normal	text-sm	">
+                {t("Login")}
               </Link>
             </div>
 
             <ul className="flex justify-between pt-10 w-[450px] items-center">
               <li>
                 <Link href="/" className="text-[#7251A2] text-sm">
-                  Home
+                  {t("Home")}
                 </Link>
               </li>
               <li>
@@ -135,20 +135,20 @@ function Navbar() {
                 >
                   <a onClick={(e) => e.preventDefault()}>
                     <Space className="text-[#7251A2] text-sm">
-                      category
+                      {t("Category")}
                       <DownOutlined />
                     </Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-                <Link href="/" className="text-[#7251A2] text-sm">
-                  about
+                <Link href="/about" className="text-[#7251A2] text-sm">
+                  {t("About")}
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-[#7251A2] text-sm">
-                  contact us
+                <Link href="/contactus" className="text-[#7251A2] text-sm">
+                  {t("Contact")}
                 </Link>
               </li>
             </ul>
@@ -162,129 +162,126 @@ function Navbar() {
 
 export default Navbar;
 
-export const SideBar = ({ setToggle }) => {
-  const { Search } = Input;
-  const onSearch = (value) => console.log(value);
+// export const SideBar = ({ setToggle }) => {
+//   const { Search } = Input;
+//   const onSearch = (value) => console.log(value);
 
-  const items = [
-    {
-      key: "1",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          // href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
-      ),
-    },
-  ];
-  const closeHandle = () => {
-    setToggle(false);
-  };
-  return (
-    <div className="bg-white z-40 w-[200px]  top-0 bottom-0 left-0  rounded-sm flex p-10 items-center flex-col gap-10 shadow-2xl fixed">
-      <CloseCircleOutlined
-        className="right-2 absolute top-2 text-[18px] text-[#67C6B0]"
-        onClick={closeHandle}
-      />
-      <Link href="/" className="mt-[-36px] max-sm:mt-0">
-        <Image
-          src="/logo.png"
-          width="64"
-          height="74"
-          className="max-sm:w-[54px] max-sm:h-[62px]"
-        />
-      </Link>
-      <div className="relative flex items-center">
-        <Search
-          placeholder="input search text"
-          onSearch={onSearch}
-          enterButton
-          className="bg-[#7251A2] rounded-[8px] w-[150px]"
-        />
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="relative">
-          <HeartOutlined className="text-[#67C6B0] text-[35px]" />
-          <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white ">
-            1
-          </span>
-        </div>
-        <span className="border-l-2  h-7 border-slate-300	"></span>
-        <div className="relative">
-          <ShoppingCartOutlined className="text-[#67C6B0] text-[35px]" />
-          <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white">
-            1
-          </span>
-        </div>
-      </div>
+//   const items = [
+//     {
+//       key: "1",
+//       label: (
+//         <a
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           // href="https://www.antgroup.com"
+//         >
+//           1st menu item
+//         </a>
+//       ),
+//     },
+//   ];
+//   const closeHandle = () => {
+//     setToggle(false);
+//   };
+//   return (
+//     <div className="bg-white z-40 w-[200px]  top-0 bottom-0 left-0  rounded-sm flex p-10 items-center flex-col gap-10 shadow-2xl fixed">
+//       <CloseCircleOutlined
+//         className="right-2 absolute top-2 text-[18px] text-[#67C6B0]"
+//         onClick={closeHandle}
+//       />
+//       <Link href="/" className="mt-[-36px] max-sm:mt-0">
+//         <Image
+//           src="/logo.png"
+//           width="64"
+//           height="74"
+//           className="max-sm:w-[54px] max-sm:h-[62px]"
+//         />
+//       </Link>
+//       <div className="relative flex items-center">
+//         <Search
+//           placeholder="input search text"
+//           onSearch={onSearch}
+//           enterButton
+//           className="bg-[#7251A2] rounded-[8px] w-[150px]"
+//         />
+//       </div>
+//       <div className="flex items-center gap-2">
+//         <div className="relative">
+//           <HeartOutlined className="text-[#67C6B0] text-[35px]" />
+//           <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white ">
+//             1
+//           </span>
+//         </div>
+//         <span className="border-l-2  h-7 border-slate-300	"></span>
+//         <div className="relative">
+//           <ShoppingCartOutlined className="text-[#67C6B0] text-[35px]" />
+//           <span className="w-4 h-4 bg-[#7251A2] rounded-full absolute bottom-1 right-0 flex justify-center items-center text-white">
+//             1
+//           </span>
+//         </div>
+//       </div>
 
-      <ul className="flex justify-between pt-10 w-[200px] items-center flex-col gap-5">
-        <li>
-          <Link href="/" className="text-[#7251A2] text-sm">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Dropdown
-            menu={{
-              items,
-            }}
-          >
-            <a onClick={(e) => e.preventDefault()}>
-              <Space className="text-[#7251A2] text-sm">
-                category
-                <DownOutlined />
-              </Space>
-            </a>
-          </Dropdown>
-        </li>
-        <li>
-          <Link href="/" className="text-[#7251A2] text-sm">
-            about
-          </Link>
-        </li>
-        <li>
-          <Link href="/" className="text-[#7251A2] text-sm">
-            contact us
-          </Link>
-        </li>
-      </ul>
-      <Dropdown
-    menu={{
-      items,
-    }}
+//       <ul className="flex justify-between pt-10 w-[200px] items-center flex-col gap-5">
+//         <li>
+//           <Link href="/" className="text-[#7251A2] text-sm">
+//             Home
+//           </Link>
+//         </li>
+//         <li>
+//           <Dropdown
+//             menu={{
+//               items,
+//             }}
+//           >
+//             <a onClick={(e) => e.preventDefault()}>
+//               <Space className="text-[#7251A2] text-sm">
+//                 category
+//                 <DownOutlined />
+//               </Space>
+//             </a>
+//           </Dropdown>
+//         </li>
+//         <li>
+//           <Link href="/" className="text-[#7251A2] text-sm">
+//             about
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/" className="text-[#7251A2] text-sm">
+//             contact us
+//           </Link>
+//         </li>
+//       </ul>
+//       <Dropdown
+//         menu={{
+//           items,
+//         }}
+//       >
+//         <a onClick={(e) => e.preventDefault()} className="text-[#7251A2]">
+//           <Space className="flex items-center justify-center">
+//             <GlobalOutlined className="text-[#7251A2] text-[18px]" />
+//             Arabic
+//             <DownOutlined className="text-[#7251A2]" />
+//           </Space>
+//         </a>
+//       </Dropdown>
 
-    
-  >
-    <a onClick={(e) => e.preventDefault()} className='text-[#7251A2]'>
-      <Space className='flex items-center justify-center'>
-      <GlobalOutlined className='text-[#7251A2] text-[18px]'/>
-        Arabic
-        <DownOutlined className='text-[#7251A2]'/>
-      </Space>
-    </a>
-  </Dropdown>
-
-      <div className="flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-[#7251A2] font-normal	text-sm	max-sm:text-[12px]"
-        >
-          {" "}
-          تسجيل
-        </Link>
-        <span className="text-black font-bold	max-sm:text-[12px]">او</span>
-        <Link
-          href="/"
-          className="text-[#7251A2] font-normal	text-sm 	max-sm:text-[12px]"
-        >
-          تسجيل دخول
-        </Link>
-      </div>
-
-    </div>
-  );
-};
+//       <div className="flex justify-between items-center">
+//         <Link
+//           href="/"
+//           className="text-[#7251A2] font-normal	text-sm	max-sm:text-[12px]"
+//         >
+//           {" "}
+//           تسجيل
+//         </Link>
+//         <span className="text-black font-bold	max-sm:text-[12px]">او</span>
+//         <Link
+//           href="/"
+//           className="text-[#7251A2] font-normal	text-sm 	max-sm:text-[12px]"
+//         >
+//           تسجيل دخول
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };

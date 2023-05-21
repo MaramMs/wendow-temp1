@@ -1,3 +1,9 @@
 {
-    "contact":"contact"
+    "app_title":"wendo",
+    "Contact":"contact",
+    "Home":"Home",
+    "Category":"Categories",
+    "About":"About",
+    "Login":"Login",
+    "Register":"Register"
 }
