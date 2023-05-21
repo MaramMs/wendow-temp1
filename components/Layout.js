@@ -9,7 +9,7 @@ const Layout = ({ children ,isAuthorized}) => {
   }
   return (
     <>
-    <Language />
+    {/* <Language /> */}
       <Navbar />
         <main className="overflow-x-hidden">
     
