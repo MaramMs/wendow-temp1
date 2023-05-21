@@ -135,7 +135,7 @@ function Navbar() {
                 >
                   <a onClick={(e) => e.preventDefault()}>
                     <Space className="text-[#7251A2] text-sm">
-                      {t("Category")}
+                      {t("Categories")}
                       <DownOutlined />
                     </Space>
                   </a>
@@ -224,7 +224,7 @@ export const SideBar = ({ setToggle }) => {
       <ul className="flex justify-between pt-10 w-[200px] items-center flex-col gap-5">
         <li>
           <Link href="/" className="text-[#7251A2] text-sm">
-            Home
+            {t('Home')}
           </Link>
         </li>
         <li>
@@ -235,7 +235,7 @@ export const SideBar = ({ setToggle }) => {
           >
             <a onClick={(e) => e.preventDefault()}>
               <Space className="text-[#7251A2] text-sm">
-                category
+              {t('Categories')}
                 <DownOutlined />
               </Space>
             </a>
@@ -243,16 +243,16 @@ export const SideBar = ({ setToggle }) => {
         </li>
         <li>
           <Link href="/" className="text-[#7251A2] text-sm">
-            about
+            {t('About')}
           </Link>
         </li>
         <li>
           <Link href="/" className="text-[#7251A2] text-sm">
-            contact us
+            {t('Contact')}
           </Link>
         </li>
       </ul>
-      <Dropdown
+      {/* <Dropdown
         menu={{
           items,
         }}
@@ -264,22 +264,21 @@ export const SideBar = ({ setToggle }) => {
             <DownOutlined className="text-[#7251A2]" />
           </Space>
         </a>
-      </Dropdown>
+      </Dropdown> */}
 
       <div className="flex justify-between items-center">
         <Link
           href="/"
           className="text-[#7251A2] font-normal	text-sm	max-sm:text-[12px]"
         >
-          {" "}
-          تسجيل
+         ={t('Login')}
         </Link>
         <span className="text-black font-bold	max-sm:text-[12px]">او</span>
         <Link
           href="/"
           className="text-[#7251A2] font-normal	text-sm 	max-sm:text-[12px]"
         >
-          تسجيل دخول
+{t('Register')}
         </Link>
       </div>
     </div>
