@@ -9,7 +9,7 @@ i18next
   .init({
     supportedLngs: ['en', 'ar'],
     fallbackLng: 'ar',
-    debug: true,
+    debug: false,
     detection: {
       order: ['cookie','htmlTag','path'],
       caches: ['cookie'],
