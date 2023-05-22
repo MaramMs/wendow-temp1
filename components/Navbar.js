@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "./Wrapper";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button, Dropdown, Space, Input } from "antd";
 import {
